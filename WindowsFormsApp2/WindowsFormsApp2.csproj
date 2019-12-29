@@ -1,0 +1,633 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E06E1D45-CD80-4487-92BF-6FC2F287E933}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp2</RootNamespace>
+    <AssemblyName>WindowsFormsApp2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\QTCSDL\Test\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Assessment, Version=1.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.BatchParserClient, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.BatchParserClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Diagnostics.Strace, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Diagnostics.Strace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Dmf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Common, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Dmf.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Assessment, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Assessment.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Collector, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Collector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.CollectorEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.CollectorEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.RegisteredServers, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.RegisteredServers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Sdk.Sfc, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Sdk.Sfc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.SqlParser, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.SqlParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.Utility, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.UtilityEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.UtilityEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEvent, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEvent.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScoped, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScoped.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventDbScopedEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventDbScopedEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Management.XEventEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Management.XEventEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.PolicyEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.PolicyEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.RegSvrEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.RegSvrEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ServiceBrokerEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.ServiceBrokerEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SmoExtended, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SmoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlClrProvider, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlClrProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlTDiagm, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlTDiagm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SString, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.SString.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.WmiEnum, Version=15.100.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\lib\net45\Microsoft.SqlServer.WmiEnum.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Core.1.1.1\lib\Microsoft.WindowsAPICodePack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAPICodePack.Shell, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAPICodePack-Shell.1.1.1\lib\Microsoft.WindowsAPICodePack.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="XanderUI">
+      <HintPath>E:\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CurrentUser.cs" />
+    <Compile Include="fDangky.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangky.Designer.cs">
+      <DependentUpon>fDangky.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fDangnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fDangnhap.Designer.cs">
+      <DependentUpon>fDangnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fChitietcauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fChitietcauhoi.Designer.cs">
+      <DependentUpon>fChitietcauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fDanhsachdethi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fDanhsachdethi.Designer.cs">
+      <DependentUpon>fDanhsachdethi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fInDanhsach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fInDanhsach.Designer.cs">
+      <DependentUpon>fInDanhsach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fDanhsachHsthi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fDanhsachHsthi.Designer.cs">
+      <DependentUpon>fDanhsachHsthi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fExportcauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fExportcauhoi.Designer.cs">
+      <DependentUpon>fExportcauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fImportcauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fImportcauhoi.Designer.cs">
+      <DependentUpon>fImportcauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fmainGiaovien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fmainGiaovien.Designer.cs">
+      <DependentUpon>fmainGiaovien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThaotaccauhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThaotaccauhoi.Designer.cs">
+      <DependentUpon>fThaotaccauhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemcauhoimoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemcauhoimoi.Designer.cs">
+      <DependentUpon>fThemcauhoimoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemhocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemhocsinh.Designer.cs">
+      <DependentUpon>fThemhocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemkythi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemkythi.Designer.cs">
+      <DependentUpon>fThemkythi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemmade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemmade.Designer.cs">
+      <DependentUpon>fThemmade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemmademoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fThemmademoi.Designer.cs">
+      <DependentUpon>fThemmademoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fXemdanhsachthi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fXemdanhsachthi.Designer.cs">
+      <DependentUpon>fXemdanhsachthi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\fXoaSuakythi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fXoaSuakythi.Designer.cs">
+      <DependentUpon>fXoaSuakythi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGiaoVien\Report\RPKetqua.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPKetqua.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\Report\RpThongtin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RpThongtin.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fBangdiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fBangdiem.Designer.cs">
+      <DependentUpon>fBangdiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fCTKythi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fCTKythi.Designer.cs">
+      <DependentUpon>fCTKythi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fCTOnluyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fCTOnluyen.Designer.cs">
+      <DependentUpon>fCTOnluyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fKetquaOnluyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fKetquaOnluyen.Designer.cs">
+      <DependentUpon>fKetquaOnluyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fKetquathi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fKetquathi.Designer.cs">
+      <DependentUpon>fKetquathi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fLichthi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fLichthi.Designer.cs">
+      <DependentUpon>fLichthi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fmainHocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fmainHocsinh.Designer.cs">
+      <DependentUpon>fmainHocsinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fOnluyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fOnluyen.Designer.cs">
+      <DependentUpon>fOnluyen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fThi.Designer.cs">
+      <DependentUpon>fThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\fThongtin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh\fThongtin.Designer.cs">
+      <DependentUpon>fThongtin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh\Report\RPBangdiem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPBangdiem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\CrytalReport\RPTatcagiaovien.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTatcagiaovien.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\CrytalReport\RPTatcahocsinh.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTatcahocsinh.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\CrytalReport\RPTatcanguoidung.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RPTatcanguoidung.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\DB\fBackupDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\DB\fBackupDatabase.Designer.cs">
+      <DependentUpon>fBackupDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\DB\fRestoreDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\DB\fRestoreDatabase.Designer.cs">
+      <DependentUpon>fRestoreDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fDanhsachnguoidung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fDanhsachnguoidung.Designer.cs">
+      <DependentUpon>fDanhsachnguoidung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fExportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fExportData.Designer.cs">
+      <DependentUpon>fExportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fImport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fImport.Designer.cs">
+      <DependentUpon>fImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fmainQuantri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fmainQuantri.Designer.cs">
+      <DependentUpon>fmainQuantri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fSuathongtinGvQt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fSuathongtinGvQt.Designer.cs">
+      <DependentUpon>fSuathongtinGvQt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fSuathongtinHs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fSuathongtinHs.Designer.cs">
+      <DependentUpon>fSuathongtinHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fThemGvQt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fThemGvQt.Designer.cs">
+      <DependentUpon>fThemGvQt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuanTri\fThemHs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\fThemHs.Designer.cs">
+      <DependentUpon>fThemHs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QT.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QT.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Validator\BaseValidator.cs" />
+    <Compile Include="Validator\CMNDValidator.cs" />
+    <Compile Include="Validator\DBValidator.cs" />
+    <Compile Include="Validator\PasswordValidator.cs" />
+    <Compile Include="Validator\RegexString.cs" />
+    <Compile Include="Validator\RegexValidator.cs" />
+    <Compile Include="Validator\RequiredInputValidator.cs" />
+    <Compile Include="Validator\ValidatorMonth.cs" />
+    <Compile Include="Validator\ValidatorN.cs" />
+    <EmbeddedResource Include="fDangky.resx">
+      <DependentUpon>fDangky.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fDangnhap.resx">
+      <DependentUpon>fDangnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fChitietcauhoi.resx">
+      <DependentUpon>fChitietcauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fDanhsachdethi.resx">
+      <DependentUpon>fDanhsachdethi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fInDanhsach.resx">
+      <DependentUpon>fInDanhsach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fDanhsachHsthi.resx">
+      <DependentUpon>fDanhsachHsthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fExportcauhoi.resx">
+      <DependentUpon>fExportcauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fImportcauhoi.resx">
+      <DependentUpon>fImportcauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fmainGiaovien.resx">
+      <DependentUpon>fmainGiaovien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThaotaccauhoi.resx">
+      <DependentUpon>fThaotaccauhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThemcauhoimoi.resx">
+      <DependentUpon>fThemcauhoimoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThemhocsinh.resx">
+      <DependentUpon>fThemhocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThemkythi.resx">
+      <DependentUpon>fThemkythi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThemmade.resx">
+      <DependentUpon>fThemmade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fThemmademoi.resx">
+      <DependentUpon>fThemmademoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fXemdanhsachthi.resx">
+      <DependentUpon>fXemdanhsachthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fXoaSuakythi.resx">
+      <DependentUpon>fXoaSuakythi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\Report\RPKetqua.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPKetqua.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\Report\RpThongtin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RpThongtin.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fBangdiem.resx">
+      <DependentUpon>fBangdiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fCTKythi.resx">
+      <DependentUpon>fCTKythi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fCTOnluyen.resx">
+      <DependentUpon>fCTOnluyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fKetquaOnluyen.resx">
+      <DependentUpon>fKetquaOnluyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fKetquathi.resx">
+      <DependentUpon>fKetquathi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fLichthi.resx">
+      <DependentUpon>fLichthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fmainHocsinh.resx">
+      <DependentUpon>fmainHocsinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fOnluyen.resx">
+      <DependentUpon>fOnluyen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fThi.resx">
+      <DependentUpon>fThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\fThongtin.resx">
+      <DependentUpon>fThongtin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh\Report\RPBangdiem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPBangdiem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\CrytalReport\RPTatcagiaovien.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTatcagiaovien.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\CrytalReport\RPTatcahocsinh.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTatcahocsinh.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\CrytalReport\RPTatcanguoidung.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RPTatcanguoidung.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\DB\fBackupDatabase.resx">
+      <DependentUpon>fBackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\DB\fRestoreDatabase.resx">
+      <DependentUpon>fRestoreDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fDanhsachnguoidung.resx">
+      <DependentUpon>fDanhsachnguoidung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fExportData.resx">
+      <DependentUpon>fExportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fImport.resx">
+      <DependentUpon>fImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fmainQuantri.resx">
+      <DependentUpon>fmainQuantri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fSuathongtinGvQt.resx">
+      <DependentUpon>fSuathongtinGvQt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fSuathongtinHs.resx">
+      <DependentUpon>fSuathongtinHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fThemGvQt.resx">
+      <DependentUpon>fThemGvQt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\fThemHs.resx">
+      <DependentUpon>fThemHs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QT.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QT.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QT.dbml.layout">
+      <DependentUpon>QT.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets" Condition="Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.SqlServer.SqlManagementObjects.150.18208.0\build\net45\Microsoft.SqlServer.SqlManagementObjects.targets'))" />
+  </Target>
+</Project>
