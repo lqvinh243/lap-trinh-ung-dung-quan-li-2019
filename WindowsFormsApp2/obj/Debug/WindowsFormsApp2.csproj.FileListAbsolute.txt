@@ -132,3 +132,4 @@ C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFor
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fThemmademoi.resources
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fThemcauhoimoi.resources
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fChitietcauhoi.resources
+C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fXemketquahocsinh.resources

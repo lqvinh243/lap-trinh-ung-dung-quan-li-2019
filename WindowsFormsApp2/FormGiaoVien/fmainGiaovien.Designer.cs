@@ -46,6 +46,8 @@
             this.cmsXemdanhsachthi = new System.Windows.Forms.ToolStripMenuItem();
             this.đềThiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsXoasuadethi = new System.Windows.Forms.ToolStripMenuItem();
+            this.họcSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsXemketquahocsinh = new System.Windows.Forms.ToolStripMenuItem();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -142,7 +144,8 @@
             this.xuiFlatMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.câuHỏiToolStripMenuItem,
             this.kỳthiToolStripMenuItem,
-            this.đềThiToolStripMenuItem});
+            this.đềThiToolStripMenuItem,
+            this.họcSinhToolStripMenuItem});
             this.xuiFlatMenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.xuiFlatMenuStrip1.Name = "xuiFlatMenuStrip1";
             this.xuiFlatMenuStrip1.SelectedBackColor = System.Drawing.Color.DarkOrchid;
@@ -260,6 +263,24 @@
             this.cmsXoasuadethi.Size = new System.Drawing.Size(372, 46);
             this.cmsXoasuadethi.Text = "Xóa,sửa,Thêm đề thi";
             // 
+            // họcSinhToolStripMenuItem
+            // 
+            this.họcSinhToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsXemketquahocsinh});
+            this.họcSinhToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.họcSinhToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.họcSinhToolStripMenuItem.Name = "họcSinhToolStripMenuItem";
+            this.họcSinhToolStripMenuItem.Size = new System.Drawing.Size(143, 45);
+            this.họcSinhToolStripMenuItem.Text = "Học sinh";
+            // 
+            // cmsXemketquahocsinh
+            // 
+            this.cmsXemketquahocsinh.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsXemketquahocsinh.ForeColor = System.Drawing.Color.White;
+            this.cmsXemketquahocsinh.Name = "cmsXemketquahocsinh";
+            this.cmsXemketquahocsinh.Size = new System.Drawing.Size(257, 42);
+            this.cmsXemketquahocsinh.Text = "Xem kết quả";
+            // 
             // fmainGiaovien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -300,5 +321,7 @@
         private System.Windows.Forms.ToolStripMenuItem cmsXemdanhsachthi;
         private System.Windows.Forms.ToolStripMenuItem đềThiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsXoasuadethi;
+        private System.Windows.Forms.ToolStripMenuItem họcSinhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cmsXemketquahocsinh;
     }
 }

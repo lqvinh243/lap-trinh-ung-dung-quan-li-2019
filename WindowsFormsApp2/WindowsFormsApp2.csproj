@@ -270,6 +270,12 @@
     <Compile Include="FormGiaoVien\fXemdanhsachthi.Designer.cs">
       <DependentUpon>fXemdanhsachthi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiaoVien\fXemketquahocsinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoVien\fXemketquahocsinh.Designer.cs">
+      <DependentUpon>fXemketquahocsinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGiaoVien\fXoaSuakythi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -495,6 +501,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoVien\fXemdanhsachthi.resx">
       <DependentUpon>fXemdanhsachthi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoVien\fXemketquahocsinh.resx">
+      <DependentUpon>fXemketquahocsinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiaoVien\fXoaSuakythi.resx">
       <DependentUpon>fXoaSuakythi.cs</DependentUpon>

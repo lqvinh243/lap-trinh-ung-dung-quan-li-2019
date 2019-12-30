@@ -54,6 +54,15 @@ namespace WindowsFormsApp2.FormGiaoVien
 
             //Đề thi
             this.cmsXoasuadethi.Click += CmsXoasuadethi_Click;
+
+            //Học sinh
+            this.cmsXemketquahocsinh.Click += CmsXemketquahocsinh_Click;
+        }
+
+        private void CmsXemketquahocsinh_Click(object sender, EventArgs e)
+        {
+            fXemketquahocsinh f = new fXemketquahocsinh();
+            f.ShowDialog();
         }
 
         private void CmsXoasuadethi_Click(object sender, EventArgs e)
