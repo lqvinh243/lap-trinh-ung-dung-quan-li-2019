@@ -16,7 +16,7 @@ namespace WindowsFormsApp2.FormQuanTri.DB
 {
     public partial class fBackupDatabase : Form
     {
-        string dbname = "DC";
+        string dbname = "DB";
         string destpath = string.Empty;
         string Servername = "DESKTOP-CNT6SBG";
         string Username = "sa";
@@ -78,7 +78,6 @@ namespace WindowsFormsApp2.FormQuanTri.DB
                 Server server = new Server(connection);
                 server.ConnectionContext.StatementTimeout = 60 * 60;
                 Database db = server.Databases[dbname];
-/////// đợi chút coi này rồi đi tắm ò
                 backup.Incremental = true;
                 backup.Checksum = true;
                 backup.ContinueAfterError = true;

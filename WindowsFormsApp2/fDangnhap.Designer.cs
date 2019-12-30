@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fDangnhap));
             this.fXDangnhap = new XanderUI.XUIFormDesign();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbLoi = new System.Windows.Forms.Label();
             this.lbMatkhau = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.btnThoat = new XanderUI.XUISuperButton();
             this.btnDangnhap = new XanderUI.XUIButton();
             this.btnDangky = new XanderUI.XUIButton();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.fXDangnhap.WorkingArea.SuspendLayout();
             this.fXDangnhap.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,15 @@
             this.fXDangnhap.WorkingArea.Name = "WorkingArea";
             this.fXDangnhap.WorkingArea.Size = new System.Drawing.Size(800, 411);
             this.fXDangnhap.WorkingArea.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel2.Location = new System.Drawing.Point(254, 191);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(239, 1);
+            this.panel2.TabIndex = 10;
             // 
             // panel1
             // 
@@ -126,6 +135,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(254, 161);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(239, 27);
             this.txtPassword.TabIndex = 5;
             // 
@@ -225,15 +235,6 @@
             this.btnDangky.TabIndex = 0;
             this.btnDangky.TextColor = System.Drawing.Color.DodgerBlue;
             this.btnDangky.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(254, 191);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(239, 1);
-            this.panel2.TabIndex = 10;
             // 
             // fDangnhap
             // 

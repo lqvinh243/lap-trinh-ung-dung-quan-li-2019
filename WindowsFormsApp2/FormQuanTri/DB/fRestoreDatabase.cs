@@ -15,12 +15,12 @@ namespace WindowsFormsApp2.FormQuanTri.DB
     public partial class fRestoreDatabase : Form
     {
 
-        public string Path =string.Empty;
+        public string Path = string.Empty;
 
         public string Servername = "DESKTOP-CNT6SBG";
         public string Username = "sa";
         public string Password = "123";
-        public string Dbname = "DB";
+        public string Dbname = "DG";
         public fRestoreDatabase()
         {
             InitializeComponent();
@@ -31,19 +31,22 @@ namespace WindowsFormsApp2.FormQuanTri.DB
 
         private void LoadData(object sender, EventArgs e)
         {
-            this.pcsLoadBackup.Value = 0;
+           
         }
 
         private void LoadControl(object sender, EventArgs e)
         {
+            this.CenterToParent();
             this.btnRestore.Enabled = false;
-            
+
             this.btnChonfile.Click += BtnChonfile_Click;
             this.btnRestore.Click += BtnRestore_Click;
             this.txtPath.TextChanged += TxtPath_TextChanged;
             this.btnThoat.Click += BtnThoat_Click;
 
-            
+
+
+
         }
         private void BtnThoat_Click(object sender, EventArgs e)
         {
@@ -68,46 +71,30 @@ namespace WindowsFormsApp2.FormQuanTri.DB
         {
             if (Path.Length > 0)
             {
-                try
-                {
-                    Server dbserver = new Server(new ServerConnection(Servername,Username,Password));
-                    Restore dbRetore = new Restore() { Database = Dbname, Action = RestoreActionType.Database, ReplaceDatabase = true ,NoRecovery = false};
-                    dbRetore.Devices.AddDevice(@"" + txtPath.Text, DeviceType.File);
-                    dbRetore.PercentComplete += DbRetore_PercentComplete;
-                    dbRetore.Complete += DbRetore_Complete;
-                    dbRetore.SqlRestoreAsync(dbserver);
+                Dbname = this.txtDbName.Text;
+                try{
+                    Server dbserver = new Server(new ServerConnection(Servername, Username, Password));
+
+                    Restore dbRetore = new Restore() { Database = Dbname, Action = RestoreActionType.Database, ReplaceDatabase = true, NoRecovery = true };
+                    dbRetore.Devices.AddDevice(@Path, DeviceType.File);
+                    dbRetore.SqlRestore(dbserver);
+                    //Restore restore = new Restore();
+                    //restore.Action = RestoreActionType.Database;
+                    //restore.Database = Dbname;
+                    //BackupDeviceItem backupDeviceItem = new BackupDeviceItem(Path, DeviceType.File);
+                    //restore.Devices.Add(backupDeviceItem);
+                    //restore.ReplaceDatabase = true;
+                    //restore.NoRecovery = true;
+                    //restore.SqlRestore(dbserver);
 
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Messs", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                MessageBox.Show("Restore thành công!", "Thông báo", MessageBoxButtons.OK);
             }
-        }
-
-        private void DbRetore_Complete(object sender, ServerMessageEventArgs e)
-        {
-            if (e.Error != null)
-            {
-                lbStatus.Invoke((MethodInvoker)delegate
-                {
-                    lbStatus.Text = e.Error.Message;
-                });
-            }
-        }
-
-        private void DbRetore_PercentComplete(object sender, PercentCompleteEventArgs e)
-        {
-            pcsLoadBackup.Invoke((MethodInvoker)delegate
-            {
-                pcsLoadBackup.Value = e.Percent;
-                pcsLoadBackup.Update();
-            });
-
-            pcsLoadBackup.Invoke((MethodInvoker)delegate
-            {
-                lbPercent.Text = $"{e.Percent}%";
-            });
         }
 
         private void BtnChonfile_Click(object sender, EventArgs e)

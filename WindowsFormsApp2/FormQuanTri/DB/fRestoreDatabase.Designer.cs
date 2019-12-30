@@ -30,13 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fRestoreDatabase));
             this.XUIform = new XanderUI.XUIFormDesign();
-            this.pcsLoadBackup = new XanderUI.XUIFlatProgressBar();
             this.txtPath = new System.Windows.Forms.TextBox();
             this.btnRestore = new XanderUI.XUIButton();
             this.btnChonfile = new XanderUI.XUIButton();
             this.btnThoat = new XanderUI.XUISuperButton();
-            this.lbStatus = new System.Windows.Forms.Label();
-            this.lbPercent = new System.Windows.Forms.Label();
+            this.txtDbName = new System.Windows.Forms.TextBox();
             this.XUIform.WorkingArea.SuspendLayout();
             this.XUIform.SuspendLayout();
             this.SuspendLayout();
@@ -59,9 +57,7 @@
             // XUIform.WorkingArea
             // 
             this.XUIform.WorkingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.XUIform.WorkingArea.Controls.Add(this.lbPercent);
-            this.XUIform.WorkingArea.Controls.Add(this.lbStatus);
-            this.XUIform.WorkingArea.Controls.Add(this.pcsLoadBackup);
+            this.XUIform.WorkingArea.Controls.Add(this.txtDbName);
             this.XUIform.WorkingArea.Controls.Add(this.txtPath);
             this.XUIform.WorkingArea.Controls.Add(this.btnRestore);
             this.XUIform.WorkingArea.Controls.Add(this.btnChonfile);
@@ -71,20 +67,6 @@
             this.XUIform.WorkingArea.Name = "WorkingArea";
             this.XUIform.WorkingArea.Size = new System.Drawing.Size(800, 420);
             this.XUIform.WorkingArea.TabIndex = 0;
-            // 
-            // pcsLoadBackup
-            // 
-            this.pcsLoadBackup.BarStyle = XanderUI.XUIFlatProgressBar.Style.Material;
-            this.pcsLoadBackup.BarThickness = 5;
-            this.pcsLoadBackup.CompleteColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(119)))), ((int)(((byte)(215)))));
-            this.pcsLoadBackup.InocmpletedColor = System.Drawing.Color.White;
-            this.pcsLoadBackup.Location = new System.Drawing.Point(245, 147);
-            this.pcsLoadBackup.MaxValue = 100;
-            this.pcsLoadBackup.Name = "pcsLoadBackup";
-            this.pcsLoadBackup.Size = new System.Drawing.Size(300, 34);
-            this.pcsLoadBackup.TabIndex = 4;
-            this.pcsLoadBackup.Text = "0%";
-            this.pcsLoadBackup.Value = 50;
             // 
             // txtPath
             // 
@@ -108,7 +90,7 @@
             this.btnRestore.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btnRestore.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btnRestore.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnRestore.Location = new System.Drawing.Point(23, 147);
+            this.btnRestore.Location = new System.Drawing.Point(329, 305);
             this.btnRestore.Name = "btnRestore";
             this.btnRestore.Size = new System.Drawing.Size(200, 50);
             this.btnRestore.TabIndex = 2;
@@ -159,25 +141,13 @@
             this.btnThoat.TextColor = System.Drawing.Color.White;
             this.btnThoat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // lbStatus
+            // txtDbName
             // 
-            this.lbStatus.AutoSize = true;
-            this.lbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStatus.Location = new System.Drawing.Point(323, 309);
-            this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(33, 29);
-            this.lbStatus.TabIndex = 5;
-            this.lbStatus.Text = "lb";
-            // 
-            // lbPercent
-            // 
-            this.lbPercent.AutoSize = true;
-            this.lbPercent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPercent.Location = new System.Drawing.Point(362, 204);
-            this.lbPercent.Name = "lbPercent";
-            this.lbPercent.Size = new System.Drawing.Size(64, 25);
-            this.lbPercent.TabIndex = 6;
-            this.lbPercent.Text = "label1";
+            this.txtDbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDbName.Location = new System.Drawing.Point(245, 167);
+            this.txtDbName.Name = "txtDbName";
+            this.txtDbName.Size = new System.Drawing.Size(294, 38);
+            this.txtDbName.TabIndex = 5;
             // 
             // fRestoreDatabase
             // 
@@ -202,8 +172,6 @@
         private XanderUI.XUIButton btnRestore;
         private XanderUI.XUIButton btnChonfile;
         private XanderUI.XUISuperButton btnThoat;
-        private XanderUI.XUIFlatProgressBar pcsLoadBackup;
-        private System.Windows.Forms.Label lbStatus;
-        private System.Windows.Forms.Label lbPercent;
+        private System.Windows.Forms.TextBox txtDbName;
     }
 }
