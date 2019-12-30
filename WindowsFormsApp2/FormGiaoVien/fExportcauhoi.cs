@@ -12,8 +12,8 @@ namespace WindowsFormsApp2.FormGiaoVien
 {
     public partial class fExportcauhoi : Form
     {
-        public string Pathfile = string.Empty;
         QTDataContext DB = new QTDataContext();
+        public bool Fill = false;
         public fExportcauhoi()
         {
             InitializeComponent();
@@ -31,11 +31,56 @@ namespace WindowsFormsApp2.FormGiaoVien
         {
             this.CenterToParent();
             this.btnThoat.Click += BtnThoat_Click;
-            this.btnLuufile.Click += BtnLuufile_Click;
             this.btnLoad.Click += BtnLoad_Click;
-
-            this.txtLuufile.TextChanged += TxtLuufile_TextChanged;
             this.FormClosing += FExportcauhoi_FormClosing;
+
+            this.btnThucthi.Click += BtnThucthi_Click;
+
+            this.dgvCauhoi.DataBindingComplete += DgvCauhoi_DataBindingComplete;
+        }
+
+        private void DgvCauhoi_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            Fill = true;
+        }
+
+        private void BtnThucthi_Click(object sender, EventArgs e)
+        {
+            if (Fill == false)
+            {
+                MessageBox.Show("Vui lòng chọn file cần xuất!", "Thông báo", MessageBoxButtons.OK);
+                return;
+            }
+
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "ExportCauhoi";
+            for (int i = 1; i < dgvCauhoi.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1,i] = dgvCauhoi.Columns[i - 1].HeaderText;
+            }
+
+            for (int i = 0; i < dgvCauhoi.Rows.Count; i++)
+            {
+                for (int j = 0; j < dgvCauhoi.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = dgvCauhoi.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+
+            var saveFiledialoge = new SaveFileDialog();
+            saveFiledialoge.FileName = "output";
+            saveFiledialoge.DefaultExt = ".xlsx";
+            if (saveFiledialoge.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFiledialoge.FileName, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            }
+
+            app.Quit();
+            
         }
 
         private void FExportcauhoi_FormClosing(object sender, FormClosingEventArgs e)
@@ -97,30 +142,7 @@ namespace WindowsFormsApp2.FormGiaoVien
 
         }
 
-        private void TxtLuufile_TextChanged(object sender, EventArgs e)
-        {
-            if (txtLuufile.TextLength > 0)
-            {
-                this.btnThucthi.Enabled = true;
-                Pathfile = this.txtLuufile.Text;
-                return;
-            }
-            this.btnThucthi.Enabled = false;
-            Pathfile = string.Empty;
-        }
 
-        private void BtnLuufile_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog ofd = new FolderBrowserDialog();
-
-            ofd.ShowNewFolderButton = true;
-            DialogResult dl = ofd.ShowDialog();
-            if (dl == DialogResult.OK)
-            {
-                this.txtLuufile.Text = ofd.SelectedPath;
-                Environment.SpecialFolder root = ofd.RootFolder;
-            }
-        }
 
         private void BtnThoat_Click(object sender, EventArgs e)
         {

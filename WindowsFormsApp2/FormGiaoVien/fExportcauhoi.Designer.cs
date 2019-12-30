@@ -31,12 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fExportcauhoi));
             this.dgvCauhoi = new System.Windows.Forms.DataGridView();
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
-            this.btnLuufile = new XanderUI.XUIButton();
-            this.txtLuufile = new System.Windows.Forms.TextBox();
-            this.btnThoat = new XanderUI.XUISuperButton();
-            this.btnThucthi = new XanderUI.XUIButton();
-            this.xuiClock1 = new XanderUI.XUIClock();
             this.btnLoad = new XanderUI.XUIButton();
+            this.xuiClock1 = new XanderUI.XUIClock();
+            this.btnThucthi = new XanderUI.XUIButton();
+            this.btnThoat = new XanderUI.XUISuperButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCauhoi)).BeginInit();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
@@ -74,8 +72,6 @@
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.xuiClock1);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.btnThucthi);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.btnThoat);
-            this.xuiFormDesign1.WorkingArea.Controls.Add(this.txtLuufile);
-            this.xuiFormDesign1.WorkingArea.Controls.Add(this.btnLuufile);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.dgvCauhoi);
             this.xuiFormDesign1.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xuiFormDesign1.WorkingArea.Location = new System.Drawing.Point(0, 39);
@@ -83,33 +79,68 @@
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1127, 532);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
-            // btnLuufile
+            // btnLoad
             // 
-            this.btnLuufile.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnLuufile.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnLuufile.ButtonImage")));
-            this.btnLuufile.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnLuufile.ButtonText = "Chọn nơi lưu";
-            this.btnLuufile.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnLuufile.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLuufile.CornerRadius = 5;
-            this.btnLuufile.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnLuufile.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnLuufile.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLuufile.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnLuufile.Location = new System.Drawing.Point(879, 66);
-            this.btnLuufile.Name = "btnLuufile";
-            this.btnLuufile.Size = new System.Drawing.Size(159, 52);
-            this.btnLuufile.TabIndex = 1;
-            this.btnLuufile.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLuufile.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnLoad.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnLoad.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.ButtonImage")));
+            this.btnLoad.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnLoad.ButtonText = "Load câu hỏi";
+            this.btnLoad.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btnLoad.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnLoad.CornerRadius = 5;
+            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLoad.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnLoad.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btnLoad.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnLoad.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnLoad.Location = new System.Drawing.Point(859, 82);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(200, 50);
+            this.btnLoad.TabIndex = 6;
+            this.btnLoad.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnLoad.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // txtLuufile
+            // xuiClock1
             // 
-            this.txtLuufile.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLuufile.Location = new System.Drawing.Point(813, 18);
-            this.txtLuufile.Name = "txtLuufile";
-            this.txtLuufile.Size = new System.Drawing.Size(302, 28);
-            this.txtLuufile.TabIndex = 2;
+            this.xuiClock1.CircleThickness = 6;
+            this.xuiClock1.DisplayFormat = XanderUI.XUIClock.HourFormat.TwelveHour;
+            this.xuiClock1.FilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(190)))), ((int)(((byte)(155)))));
+            this.xuiClock1.FilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.FilledSecondColor = System.Drawing.Color.DarkOrchid;
+            this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
+            this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.Location = new System.Drawing.Point(906, 181);
+            this.xuiClock1.Name = "xuiClock1";
+            this.xuiClock1.ShowAmPm = false;
+            this.xuiClock1.ShowHexagon = true;
+            this.xuiClock1.ShowMinutesCircle = true;
+            this.xuiClock1.ShowSecondsCircle = true;
+            this.xuiClock1.Size = new System.Drawing.Size(120, 130);
+            this.xuiClock1.TabIndex = 5;
+            this.xuiClock1.Text = "xuiClock1";
+            this.xuiClock1.UnfilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(85)))));
+            this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            // 
+            // btnThucthi
+            // 
+            this.btnThucthi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnThucthi.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnThucthi.ButtonImage")));
+            this.btnThucthi.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnThucthi.ButtonText = "Thực thi";
+            this.btnThucthi.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btnThucthi.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnThucthi.CornerRadius = 5;
+            this.btnThucthi.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnThucthi.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btnThucthi.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnThucthi.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnThucthi.Location = new System.Drawing.Point(895, 357);
+            this.btnThucthi.Name = "btnThucthi";
+            this.btnThucthi.Size = new System.Drawing.Size(153, 50);
+            this.btnThucthi.TabIndex = 4;
+            this.btnThucthi.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnThucthi.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
             // btnThoat
             // 
@@ -133,69 +164,6 @@
             this.btnThoat.TextColor = System.Drawing.Color.White;
             this.btnThoat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // btnThucthi
-            // 
-            this.btnThucthi.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnThucthi.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnThucthi.ButtonImage")));
-            this.btnThucthi.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnThucthi.ButtonText = "Thực thi";
-            this.btnThucthi.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnThucthi.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnThucthi.CornerRadius = 5;
-            this.btnThucthi.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnThucthi.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnThucthi.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnThucthi.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnThucthi.Location = new System.Drawing.Point(906, 386);
-            this.btnThucthi.Name = "btnThucthi";
-            this.btnThucthi.Size = new System.Drawing.Size(153, 50);
-            this.btnThucthi.TabIndex = 4;
-            this.btnThucthi.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btnThucthi.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // xuiClock1
-            // 
-            this.xuiClock1.CircleThickness = 6;
-            this.xuiClock1.DisplayFormat = XanderUI.XUIClock.HourFormat.TwelveHour;
-            this.xuiClock1.FilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(190)))), ((int)(((byte)(155)))));
-            this.xuiClock1.FilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.FilledSecondColor = System.Drawing.Color.DarkOrchid;
-            this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
-            this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.Location = new System.Drawing.Point(918, 223);
-            this.xuiClock1.Name = "xuiClock1";
-            this.xuiClock1.ShowAmPm = false;
-            this.xuiClock1.ShowHexagon = true;
-            this.xuiClock1.ShowMinutesCircle = true;
-            this.xuiClock1.ShowSecondsCircle = true;
-            this.xuiClock1.Size = new System.Drawing.Size(120, 130);
-            this.xuiClock1.TabIndex = 5;
-            this.xuiClock1.Text = "xuiClock1";
-            this.xuiClock1.UnfilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(85)))));
-            this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            // 
-            // btnLoad
-            // 
-            this.btnLoad.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnLoad.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnLoad.ButtonImage")));
-            this.btnLoad.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnLoad.ButtonText = "Load câu hỏi";
-            this.btnLoad.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnLoad.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoad.CornerRadius = 5;
-            this.btnLoad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLoad.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnLoad.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnLoad.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoad.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnLoad.Location = new System.Drawing.Point(859, 144);
-            this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(200, 50);
-            this.btnLoad.TabIndex = 6;
-            this.btnLoad.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btnLoad.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
             // fExportcauhoi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -207,7 +175,6 @@
             this.Text = "fExportcauhoi";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCauhoi)).EndInit();
             this.xuiFormDesign1.WorkingArea.ResumeLayout(false);
-            this.xuiFormDesign1.WorkingArea.PerformLayout();
             this.xuiFormDesign1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -220,8 +187,6 @@
         private XanderUI.XUIClock xuiClock1;
         private XanderUI.XUIButton btnThucthi;
         private XanderUI.XUISuperButton btnThoat;
-        private System.Windows.Forms.TextBox txtLuufile;
-        private XanderUI.XUIButton btnLuufile;
         private XanderUI.XUIButton btnLoad;
     }
 }

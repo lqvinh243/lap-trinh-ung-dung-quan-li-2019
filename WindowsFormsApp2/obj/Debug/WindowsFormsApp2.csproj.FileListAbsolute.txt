@@ -133,3 +133,6 @@ C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFor
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fThemcauhoimoi.resources
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fChitietcauhoi.resources
 C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fXemketquahocsinh.resources
+C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fThongkecauhoi.resources
+C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.FormGiaoVien.fThongkekythi.resources
+C:\Users\lqvin\Desktop\DA\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.ResolveComReference.cache

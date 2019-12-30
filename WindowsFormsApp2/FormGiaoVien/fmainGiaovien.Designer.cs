@@ -48,6 +48,9 @@
             this.cmsXoasuadethi = new System.Windows.Forms.ToolStripMenuItem();
             this.họcSinhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsXemketquahocsinh = new System.Windows.Forms.ToolStripMenuItem();
+            this.thốngKêCâuHỏiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsThongkekythi = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsThongkecauhoi = new System.Windows.Forms.ToolStripMenuItem();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -145,13 +148,14 @@
             this.câuHỏiToolStripMenuItem,
             this.kỳthiToolStripMenuItem,
             this.đềThiToolStripMenuItem,
-            this.họcSinhToolStripMenuItem});
+            this.họcSinhToolStripMenuItem,
+            this.thốngKêCâuHỏiToolStripMenuItem});
             this.xuiFlatMenuStrip1.Location = new System.Drawing.Point(0, 0);
             this.xuiFlatMenuStrip1.Name = "xuiFlatMenuStrip1";
             this.xuiFlatMenuStrip1.SelectedBackColor = System.Drawing.Color.DarkOrchid;
             this.xuiFlatMenuStrip1.SelectedTextColor = System.Drawing.Color.White;
             this.xuiFlatMenuStrip1.SeperatorColor = System.Drawing.Color.White;
-            this.xuiFlatMenuStrip1.Size = new System.Drawing.Size(156, 411);
+            this.xuiFlatMenuStrip1.Size = new System.Drawing.Size(161, 411);
             this.xuiFlatMenuStrip1.TabIndex = 0;
             this.xuiFlatMenuStrip1.Text = "xuiFlatMenuStrip1";
             this.xuiFlatMenuStrip1.TextColor = System.Drawing.Color.White;
@@ -165,7 +169,7 @@
             this.câuHỏiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.câuHỏiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.câuHỏiToolStripMenuItem.Name = "câuHỏiToolStripMenuItem";
-            this.câuHỏiToolStripMenuItem.Size = new System.Drawing.Size(143, 42);
+            this.câuHỏiToolStripMenuItem.Size = new System.Drawing.Size(148, 42);
             this.câuHỏiToolStripMenuItem.Text = "Câu hỏi";
             // 
             // cmsImportCauhoi
@@ -203,7 +207,7 @@
             this.kỳthiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.kỳthiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.kỳthiToolStripMenuItem.Name = "kỳthiToolStripMenuItem";
-            this.kỳthiToolStripMenuItem.Size = new System.Drawing.Size(143, 45);
+            this.kỳthiToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
             this.kỳthiToolStripMenuItem.Text = "Kỳ thi";
             // 
             // cmsXoaSuakythi
@@ -253,7 +257,7 @@
             this.đềThiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.đềThiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.đềThiToolStripMenuItem.Name = "đềThiToolStripMenuItem";
-            this.đềThiToolStripMenuItem.Size = new System.Drawing.Size(143, 45);
+            this.đềThiToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
             this.đềThiToolStripMenuItem.Text = "Đề thi";
             // 
             // cmsXoasuadethi
@@ -270,7 +274,7 @@
             this.họcSinhToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.họcSinhToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.họcSinhToolStripMenuItem.Name = "họcSinhToolStripMenuItem";
-            this.họcSinhToolStripMenuItem.Size = new System.Drawing.Size(143, 45);
+            this.họcSinhToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
             this.họcSinhToolStripMenuItem.Text = "Học sinh";
             // 
             // cmsXemketquahocsinh
@@ -280,6 +284,31 @@
             this.cmsXemketquahocsinh.Name = "cmsXemketquahocsinh";
             this.cmsXemketquahocsinh.Size = new System.Drawing.Size(257, 42);
             this.cmsXemketquahocsinh.Text = "Xem kết quả";
+            // 
+            // thốngKêCâuHỏiToolStripMenuItem
+            // 
+            this.thốngKêCâuHỏiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cmsThongkekythi,
+            this.cmsThongkecauhoi});
+            this.thốngKêCâuHỏiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.thốngKêCâuHỏiToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.thốngKêCâuHỏiToolStripMenuItem.Name = "thốngKêCâuHỏiToolStripMenuItem";
+            this.thốngKêCâuHỏiToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
+            this.thốngKêCâuHỏiToolStripMenuItem.Text = "Thống kê";
+            // 
+            // cmsThongkekythi
+            // 
+            this.cmsThongkekythi.ForeColor = System.Drawing.Color.White;
+            this.cmsThongkekythi.Name = "cmsThongkekythi";
+            this.cmsThongkekythi.Size = new System.Drawing.Size(331, 46);
+            this.cmsThongkekythi.Text = "Thống kê kỳ thi";
+            // 
+            // cmsThongkecauhoi
+            // 
+            this.cmsThongkecauhoi.ForeColor = System.Drawing.Color.White;
+            this.cmsThongkecauhoi.Name = "cmsThongkecauhoi";
+            this.cmsThongkecauhoi.Size = new System.Drawing.Size(331, 46);
+            this.cmsThongkecauhoi.Text = "Thống kê câu hỏi";
             // 
             // fmainGiaovien
             // 
@@ -323,5 +352,8 @@
         private System.Windows.Forms.ToolStripMenuItem cmsXoasuadethi;
         private System.Windows.Forms.ToolStripMenuItem họcSinhToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsXemketquahocsinh;
+        private System.Windows.Forms.ToolStripMenuItem thốngKêCâuHỏiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cmsThongkekythi;
+        private System.Windows.Forms.ToolStripMenuItem cmsThongkecauhoi;
     }
 }
