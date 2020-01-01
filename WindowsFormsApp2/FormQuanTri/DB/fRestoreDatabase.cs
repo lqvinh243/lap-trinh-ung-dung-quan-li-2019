@@ -20,7 +20,7 @@ namespace WindowsFormsApp2.FormQuanTri.DB
         public string Servername = "DESKTOP-CNT6SBG";
         public string Username = "sa";
         public string Password = "123";
-        public string Dbname = "DG";
+        public string Dbname = string.Empty;
         public fRestoreDatabase()
         {
             InitializeComponent();
@@ -71,21 +71,26 @@ namespace WindowsFormsApp2.FormQuanTri.DB
         {
             if (Path.Length > 0)
             {
+                
                 Dbname = this.txtDbName.Text;
+                if(Dbname.Length <= 0)
+                {
+                    MessageBox.Show("Vui lòng chọn db cần restore!");
+                    return;
+                }
                 try{
                     Server dbserver = new Server(new ServerConnection(Servername, Username, Password));
 
-                    Restore dbRetore = new Restore() { Database = Dbname, Action = RestoreActionType.Database, ReplaceDatabase = true, NoRecovery = true };
-                    dbRetore.Devices.AddDevice(@Path, DeviceType.File);
-                    dbRetore.SqlRestore(dbserver);
-                    //Restore restore = new Restore();
-                    //restore.Action = RestoreActionType.Database;
-                    //restore.Database = Dbname;
-                    //BackupDeviceItem backupDeviceItem = new BackupDeviceItem(Path, DeviceType.File);
-                    //restore.Devices.Add(backupDeviceItem);
-                    //restore.ReplaceDatabase = true;
-                    //restore.NoRecovery = true;
-                    //restore.SqlRestore(dbserver);
+                    //Restore dbRetore = new Restore() { Database = Dbname, Action = RestoreActionType.Database, ReplaceDatabase = true, NoRecovery = true };
+                    //dbRetore.Devices.AddDevice(@Path, DeviceType.File);
+                    //dbRetore.SqlRestore(dbserver);
+                    Restore restore = new Restore();
+                    restore.Database = Dbname;
+                    restore.Action = RestoreActionType.Database;
+                    restore.Devices.AddDevice(@Path, DeviceType.File);
+                    restore.ReplaceDatabase = true;
+                    restore.NoRecovery = true;
+                    restore.SqlRestore(dbserver);
 
                 }
                 catch (Exception ex)

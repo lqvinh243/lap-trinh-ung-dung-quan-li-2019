@@ -51,9 +51,7 @@ namespace WindowsFormsApp2.FormGiaoVien
 
         public void LoadKhoi()
         {
-            this.cbbKhoi.Items.Add(10);
-            this.cbbKhoi.Items.Add(11);
-            this.cbbKhoi.Items.Add(12);
+            this.cbbKhoi.Items.Add(Khoikythi);
             this.cbbKhoi.SelectedIndex = 0;
         }
 

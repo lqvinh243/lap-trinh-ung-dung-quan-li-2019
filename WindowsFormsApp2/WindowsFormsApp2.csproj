@@ -400,6 +400,12 @@
     <Compile Include="FormQuanTri\DB\fBackupDatabase.Designer.cs">
       <DependentUpon>fBackupDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQuanTri\DB\fKetnoigiaodien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuanTri\DB\fKetnoigiaodien.Designer.cs">
+      <DependentUpon>fKetnoigiaodien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuanTri\DB\fRestoreDatabase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -586,6 +592,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanTri\DB\fBackupDatabase.resx">
       <DependentUpon>fBackupDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuanTri\DB\fKetnoigiaodien.resx">
+      <DependentUpon>fKetnoigiaodien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanTri\DB\fRestoreDatabase.resx">
       <DependentUpon>fRestoreDatabase.cs</DependentUpon>

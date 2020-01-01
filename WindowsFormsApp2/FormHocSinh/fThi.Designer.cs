@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThi));
             this.fXOnluyen = new XanderUI.XUIFormDesign();
+            this.lbChonkythi = new System.Windows.Forms.Label();
+            this.cbbKythi = new System.Windows.Forms.ComboBox();
+            this.lbMathisinh = new System.Windows.Forms.Label();
+            this.txtMathisinh = new System.Windows.Forms.TextBox();
+            this.lbNgaysinh = new System.Windows.Forms.Label();
+            this.txtNgaythi = new System.Windows.Forms.TextBox();
             this.btnThoat = new XanderUI.XUISuperButton();
             this.btnBatdau = new XanderUI.XUISuperButton();
             this.lbMade = new System.Windows.Forms.Label();
@@ -38,12 +44,8 @@
             this.txtMade = new System.Windows.Forms.TextBox();
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
             this.xuiClock1 = new XanderUI.XUIClock();
-            this.txtNgaythi = new System.Windows.Forms.TextBox();
-            this.lbNgaysinh = new System.Windows.Forms.Label();
-            this.lbMathisinh = new System.Windows.Forms.Label();
-            this.txtMathisinh = new System.Windows.Forms.TextBox();
-            this.cbbKythi = new System.Windows.Forms.ComboBox();
-            this.lbChonkythi = new System.Windows.Forms.Label();
+            this.lbKhoi = new System.Windows.Forms.Label();
+            this.txtKhoi = new System.Windows.Forms.TextBox();
             this.fXOnluyen.WorkingArea.SuspendLayout();
             this.fXOnluyen.SuspendLayout();
             this.xuiSlidingPanel1.SuspendLayout();
@@ -60,13 +62,15 @@
             this.fXOnluyen.Name = "fXOnluyen";
             this.fXOnluyen.ShowMaximize = true;
             this.fXOnluyen.ShowMinimize = true;
-            this.fXOnluyen.Size = new System.Drawing.Size(555, 450);
+            this.fXOnluyen.Size = new System.Drawing.Size(710, 450);
             this.fXOnluyen.TabIndex = 1;
             this.fXOnluyen.TitleText = "Ôn luyện đề thi";
             // 
             // fXOnluyen.WorkingArea
             // 
             this.fXOnluyen.WorkingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.fXOnluyen.WorkingArea.Controls.Add(this.lbKhoi);
+            this.fXOnluyen.WorkingArea.Controls.Add(this.txtKhoi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.lbChonkythi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.cbbKythi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.lbMathisinh);
@@ -83,8 +87,63 @@
             this.fXOnluyen.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fXOnluyen.WorkingArea.Location = new System.Drawing.Point(0, 39);
             this.fXOnluyen.WorkingArea.Name = "WorkingArea";
-            this.fXOnluyen.WorkingArea.Size = new System.Drawing.Size(555, 411);
+            this.fXOnluyen.WorkingArea.Size = new System.Drawing.Size(710, 411);
             this.fXOnluyen.WorkingArea.TabIndex = 0;
+            // 
+            // lbChonkythi
+            // 
+            this.lbChonkythi.AutoSize = true;
+            this.lbChonkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChonkythi.Location = new System.Drawing.Point(79, 142);
+            this.lbChonkythi.Name = "lbChonkythi";
+            this.lbChonkythi.Size = new System.Drawing.Size(130, 29);
+            this.lbChonkythi.TabIndex = 22;
+            this.lbChonkythi.Text = "Chọn kỳ thi";
+            // 
+            // cbbKythi
+            // 
+            this.cbbKythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKythi.FormattingEnabled = true;
+            this.cbbKythi.Location = new System.Drawing.Point(236, 141);
+            this.cbbKythi.Name = "cbbKythi";
+            this.cbbKythi.Size = new System.Drawing.Size(159, 30);
+            this.cbbKythi.TabIndex = 2;
+            // 
+            // lbMathisinh
+            // 
+            this.lbMathisinh.AutoSize = true;
+            this.lbMathisinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMathisinh.Location = new System.Drawing.Point(84, 84);
+            this.lbMathisinh.Name = "lbMathisinh";
+            this.lbMathisinh.Size = new System.Drawing.Size(127, 29);
+            this.lbMathisinh.TabIndex = 21;
+            this.lbMathisinh.Text = "Mã thí sinh";
+            // 
+            // txtMathisinh
+            // 
+            this.txtMathisinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMathisinh.Location = new System.Drawing.Point(236, 78);
+            this.txtMathisinh.Name = "txtMathisinh";
+            this.txtMathisinh.Size = new System.Drawing.Size(159, 38);
+            this.txtMathisinh.TabIndex = 20;
+            // 
+            // lbNgaysinh
+            // 
+            this.lbNgaysinh.AutoSize = true;
+            this.lbNgaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNgaysinh.Location = new System.Drawing.Point(82, 27);
+            this.lbNgaysinh.Name = "lbNgaysinh";
+            this.lbNgaysinh.Size = new System.Drawing.Size(100, 29);
+            this.lbNgaysinh.TabIndex = 19;
+            this.lbNgaysinh.Text = "Ngày thi";
+            // 
+            // txtNgaythi
+            // 
+            this.txtNgaythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNgaythi.Location = new System.Drawing.Point(195, 21);
+            this.txtNgaythi.Name = "txtNgaythi";
+            this.txtNgaythi.Size = new System.Drawing.Size(205, 38);
+            this.txtNgaythi.TabIndex = 2;
             // 
             // btnThoat
             // 
@@ -98,7 +157,7 @@
             this.btnThoat.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnThoat.HoverTextColor = System.Drawing.Color.White;
             this.btnThoat.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnThoat.Location = new System.Drawing.Point(207, 359);
+            this.btnThoat.Location = new System.Drawing.Point(282, 359);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnThoat.SelectedTextColor = System.Drawing.Color.White;
@@ -121,7 +180,7 @@
             this.btnBatdau.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnBatdau.HoverTextColor = System.Drawing.Color.White;
             this.btnBatdau.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnBatdau.Location = new System.Drawing.Point(23, 313);
+            this.btnBatdau.Location = new System.Drawing.Point(98, 313);
             this.btnBatdau.Name = "btnBatdau";
             this.btnBatdau.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnBatdau.SelectedTextColor = System.Drawing.Color.White;
@@ -135,7 +194,7 @@
             // 
             this.lbMade.AutoSize = true;
             this.lbMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMade.Location = new System.Drawing.Point(3, 204);
+            this.lbMade.Location = new System.Drawing.Point(78, 204);
             this.lbMade.Name = "lbMade";
             this.lbMade.Size = new System.Drawing.Size(143, 29);
             this.lbMade.TabIndex = 2;
@@ -153,7 +212,7 @@
             this.btnPre.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnPre.HoverTextColor = System.Drawing.Color.White;
             this.btnPre.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnPre.Location = new System.Drawing.Point(55, 251);
+            this.btnPre.Location = new System.Drawing.Point(130, 251);
             this.btnPre.Name = "btnPre";
             this.btnPre.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnPre.SelectedTextColor = System.Drawing.Color.White;
@@ -175,7 +234,7 @@
             this.btnNext.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnNext.HoverTextColor = System.Drawing.Color.White;
             this.btnNext.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnNext.Location = new System.Drawing.Point(218, 251);
+            this.btnNext.Location = new System.Drawing.Point(293, 251);
             this.btnNext.Name = "btnNext";
             this.btnNext.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnNext.SelectedTextColor = System.Drawing.Color.White;
@@ -188,7 +247,7 @@
             // txtMade
             // 
             this.txtMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMade.Location = new System.Drawing.Point(161, 204);
+            this.txtMade.Location = new System.Drawing.Point(236, 204);
             this.txtMade.Name = "txtMade";
             this.txtMade.Size = new System.Drawing.Size(56, 41);
             this.txtMade.TabIndex = 2;
@@ -202,7 +261,7 @@
             this.xuiSlidingPanel1.Controls.Add(this.xuiClock1);
             this.xuiSlidingPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.xuiSlidingPanel1.HideControls = false;
-            this.xuiSlidingPanel1.Location = new System.Drawing.Point(331, 0);
+            this.xuiSlidingPanel1.Location = new System.Drawing.Point(486, 0);
             this.xuiSlidingPanel1.Name = "xuiSlidingPanel1";
             this.xuiSlidingPanel1.PanelWidthCollapsed = 50;
             this.xuiSlidingPanel1.PanelWidthExpanded = 200;
@@ -235,66 +294,29 @@
             this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             // 
-            // txtNgaythi
+            // lbKhoi
             // 
-            this.txtNgaythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaythi.Location = new System.Drawing.Point(120, 21);
-            this.txtNgaythi.Name = "txtNgaythi";
-            this.txtNgaythi.Size = new System.Drawing.Size(205, 38);
-            this.txtNgaythi.TabIndex = 2;
+            this.lbKhoi.AutoSize = true;
+            this.lbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbKhoi.Location = new System.Drawing.Point(298, 204);
+            this.lbKhoi.Name = "lbKhoi";
+            this.lbKhoi.Size = new System.Drawing.Size(62, 29);
+            this.lbKhoi.TabIndex = 23;
+            this.lbKhoi.Text = "Khối";
             // 
-            // lbNgaysinh
+            // txtKhoi
             // 
-            this.lbNgaysinh.AutoSize = true;
-            this.lbNgaysinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNgaysinh.Location = new System.Drawing.Point(7, 27);
-            this.lbNgaysinh.Name = "lbNgaysinh";
-            this.lbNgaysinh.Size = new System.Drawing.Size(100, 29);
-            this.lbNgaysinh.TabIndex = 19;
-            this.lbNgaysinh.Text = "Ngày thi";
-            // 
-            // lbMathisinh
-            // 
-            this.lbMathisinh.AutoSize = true;
-            this.lbMathisinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMathisinh.Location = new System.Drawing.Point(9, 84);
-            this.lbMathisinh.Name = "lbMathisinh";
-            this.lbMathisinh.Size = new System.Drawing.Size(127, 29);
-            this.lbMathisinh.TabIndex = 21;
-            this.lbMathisinh.Text = "Mã thí sinh";
-            // 
-            // txtMathisinh
-            // 
-            this.txtMathisinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMathisinh.Location = new System.Drawing.Point(161, 78);
-            this.txtMathisinh.Name = "txtMathisinh";
-            this.txtMathisinh.Size = new System.Drawing.Size(159, 38);
-            this.txtMathisinh.TabIndex = 20;
-            // 
-            // cbbKythi
-            // 
-            this.cbbKythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbKythi.FormattingEnabled = true;
-            this.cbbKythi.Location = new System.Drawing.Point(161, 141);
-            this.cbbKythi.Name = "cbbKythi";
-            this.cbbKythi.Size = new System.Drawing.Size(159, 30);
-            this.cbbKythi.TabIndex = 2;
-            // 
-            // lbChonkythi
-            // 
-            this.lbChonkythi.AutoSize = true;
-            this.lbChonkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChonkythi.Location = new System.Drawing.Point(4, 142);
-            this.lbChonkythi.Name = "lbChonkythi";
-            this.lbChonkythi.Size = new System.Drawing.Size(130, 29);
-            this.lbChonkythi.TabIndex = 22;
-            this.lbChonkythi.Text = "Chọn kỳ thi";
+            this.txtKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKhoi.Location = new System.Drawing.Point(366, 204);
+            this.txtKhoi.Name = "txtKhoi";
+            this.txtKhoi.Size = new System.Drawing.Size(56, 41);
+            this.txtKhoi.TabIndex = 24;
             // 
             // fThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 450);
+            this.ClientSize = new System.Drawing.Size(710, 450);
             this.Controls.Add(this.fXOnluyen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fThi";
@@ -324,5 +346,7 @@
         private System.Windows.Forms.TextBox txtNgaythi;
         private System.Windows.Forms.Label lbChonkythi;
         private System.Windows.Forms.ComboBox cbbKythi;
+        private System.Windows.Forms.Label lbKhoi;
+        private System.Windows.Forms.TextBox txtKhoi;
     }
 }

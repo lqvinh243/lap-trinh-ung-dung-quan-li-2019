@@ -52,5 +52,15 @@ namespace WindowsFormsApp2.Properties {
                 return ((string)(this["DBConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-CNT6SBG;Initial Catalog=LTUDQL;Integrated Security=True")]
+        public string LTUDQLConnectionString {
+            get {
+                return ((string)(this["LTUDQLConnectionString"]));
+            }
+        }
     }
 }

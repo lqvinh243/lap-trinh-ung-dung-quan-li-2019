@@ -93,7 +93,7 @@ namespace WindowsFormsApp2.FormGiaoVien
                         return;
                     }
                 }
-                MessageBox.Show("Thêm mã đề mới có ID : " + IDmoi.ToString() + "và Khối :" + Khoichon.ToString() + " thành công!");
+                MessageBox.Show("Thêm mã đề mới có ID : " + IDmoi.ToString() + " và Khối : " + Khoichon.ToString() + " thành công!");
                 this.Close();
             }
         }

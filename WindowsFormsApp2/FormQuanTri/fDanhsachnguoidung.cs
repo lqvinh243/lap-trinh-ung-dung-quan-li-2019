@@ -14,7 +14,7 @@ namespace WindowsFormsApp2.FormQuanTri
     {
         public int Loai, Fill;
         public int Khoi, Lop;
-        public int i = 1, sltoida, page = 7;
+        public int i = 1, sltoida, page = 1;
         public fDanhsachnguoidung(int g)
         {
             InitializeComponent();
@@ -34,7 +34,8 @@ namespace WindowsFormsApp2.FormQuanTri
         private void LoadControl(object sender, EventArgs e)
         {
             this.btnChinhsua.Enabled = false;
-
+            this.btnPre.Enabled = false;
+            this.btnStart.Enabled = false;
             this.btnThoat.Click += BtnThoat_Click;
 
             this.cbbKhoi.TextChanged += CbbKhoi_TextChanged;
@@ -64,11 +65,11 @@ namespace WindowsFormsApp2.FormQuanTri
             {
                 int idx = dgvDanhsach.SelectedCells[0].RowIndex;
                 DataGridViewRow slr = dgvDanhsach.Rows[idx];
-                fSuathongtinGvQt f = new fSuathongtinGvQt(int.Parse(slr.Cells[0].Value.ToString()),Loai);
+                fSuathongtinGvQt f = new fSuathongtinGvQt(int.Parse(slr.Cells[0].Value.ToString()), Loai);
                 f.ShowDialog();
                 LoadDanhSach(Khoi, Lop);
             }
-            
+
         }
 
         private void BtnLast_Click(object sender, EventArgs e)
@@ -79,9 +80,9 @@ namespace WindowsFormsApp2.FormQuanTri
             this.btnLast.Enabled = false;
             this.btnPre.Enabled = true;
             this.btnStart.Enabled = true;
-            
 
-            
+
+
         }
 
         private void DgvDanhsach_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +92,7 @@ namespace WindowsFormsApp2.FormQuanTri
                 this.btnChinhsua.Enabled = true;
             }
             else this.btnChinhsua.Enabled = false;
-            
+
         }
 
 
@@ -246,6 +247,11 @@ namespace WindowsFormsApp2.FormQuanTri
                     this.lbHeader.Text = "Danh sách quản trị";
                     var linq = DB.NguoiDungs.Join(DB.QuanTris, a => a.ID, b => b.ID, (a, b) => new { CMND = a.CMND, Hoten = b.Hoten, Ngaysinh = b.Ngaysinh });
                     sltoida = linq.Count() / page + (linq.Count() % page > 0 ? 1 : 0);
+                    if (sltoida == 0)
+                    {
+                        MessageBox.Show("Lỗi khi lấy danh sách!!");
+                        this.Close();
+                    }
                     if (i == sltoida)
                     {
                         this.btnNext.Enabled = false;

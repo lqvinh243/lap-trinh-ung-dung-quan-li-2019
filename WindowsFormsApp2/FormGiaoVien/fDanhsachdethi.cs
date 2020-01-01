@@ -137,6 +137,7 @@ namespace WindowsFormsApp2.FormGiaoVien
             }
             fThemcauhoimoi f = new fThemcauhoimoi(IDMade,Khoi);
             f.ShowDialog();
+            LoadCTMade();
         }
 
         private void BtnThemmade_Click(object sender, EventArgs e)

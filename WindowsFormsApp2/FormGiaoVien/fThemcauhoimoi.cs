@@ -146,7 +146,6 @@ namespace WindowsFormsApp2.FormGiaoVien
             {
                 this.Close();
             }
-            Reset();
         }
 
         private void DgvCauhoi_CellClick(object sender, DataGridViewCellEventArgs e)

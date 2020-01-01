@@ -144,7 +144,8 @@ namespace WindowsFormsApp2.FormQuanTri
                 {
                     var rqLop = new Regex(RegexString.Lop);
                     var rqKhoi = new Regex(RegexString.Khoi);
-                    if (rqLop.IsMatch(Lop) && rqKhoi.IsMatch(Khoi))
+                    var rqCMND = new Regex(RegexString.CMND);
+                    if (rqLop.IsMatch(Lop) && rqKhoi.IsMatch(Khoi) && rqCMND.IsMatch(CMND))
                     {
                         int CheckDate;
                         try
@@ -190,7 +191,8 @@ namespace WindowsFormsApp2.FormQuanTri
             using (var DB = new QTDataContext())
             {
                 var CheckCMND = DB.NguoiDungs.Where(idx => idx.CMND == CMND).SingleOrDefault();
-                if (CheckCMND == null)
+                var rgCMND = new Regex(RegexString.CMND);
+                if (CheckCMND == null && rgCMND.IsMatch(CMND))
                 {
                     int CheckDate = 0;
                     try
@@ -248,7 +250,7 @@ namespace WindowsFormsApp2.FormQuanTri
                                 string Khoi = vl.Cells[2].Value.ToString();
                                 string Hoten = vl.Cells[3].Value.ToString();
                                 string Ngaysinh = vl.Cells[4].Value.ToString();
-                                int CheckInsert = 0;
+                                CheckInsert = 0;
                                 ThemHs(CMND, Lop, Khoi, Hoten, Ngaysinh);
                                 if (CheckInsert == 0)
                                 {
@@ -264,7 +266,7 @@ namespace WindowsFormsApp2.FormQuanTri
                                 string CMND = vl.Cells[0].Value.ToString();
                                 string Hoten = vl.Cells[1].Value.ToString();
                                 string Ngaysinh = vl.Cells[2].Value.ToString();
-                                int CheckInsert = 0;
+                                CheckInsert = 0;
                                 ThemGv(CMND, Hoten, Ngaysinh);
                                 if (CheckInsert == 0)
                                 {

@@ -22,7 +22,7 @@ namespace WindowsFormsApp2
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="DB")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="LTUDQL")]
 	public partial class QTDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -75,7 +75,7 @@ namespace WindowsFormsApp2
     #endregion
 		
 		public QTDataContext() : 
-				base(global::WindowsFormsApp2.Properties.Settings.Default.DBConnectionString, mappingSource)
+				base(global::WindowsFormsApp2.Properties.Settings.Default.LTUDQLConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -3200,9 +3200,9 @@ namespace WindowsFormsApp2
 		
 		private int _Gioihanthoigian;
 		
-		private System.Nullable<System.DateTime> _Ngaythi;
-		
 		private System.Nullable<System.DateTime> _Ngaytao;
+		
+		private System.Nullable<System.DateTime> _Ngaythi;
 		
 		private EntitySet<CT_KyThi> _CT_KyThis;
 		
@@ -3222,10 +3222,10 @@ namespace WindowsFormsApp2
     partial void OnIDNguoitaoChanged();
     partial void OnGioihanthoigianChanging(int value);
     partial void OnGioihanthoigianChanged();
-    partial void OnNgaythiChanging(System.Nullable<System.DateTime> value);
-    partial void OnNgaythiChanged();
     partial void OnNgaytaoChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaytaoChanged();
+    partial void OnNgaythiChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgaythiChanged();
     #endregion
 		
 		public KyThi()
@@ -3339,26 +3339,6 @@ namespace WindowsFormsApp2
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngaythi", DbType="Date")]
-		public System.Nullable<System.DateTime> Ngaythi
-		{
-			get
-			{
-				return this._Ngaythi;
-			}
-			set
-			{
-				if ((this._Ngaythi != value))
-				{
-					this.OnNgaythiChanging(value);
-					this.SendPropertyChanging();
-					this._Ngaythi = value;
-					this.SendPropertyChanged("Ngaythi");
-					this.OnNgaythiChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngaytao", DbType="Date")]
 		public System.Nullable<System.DateTime> Ngaytao
 		{
@@ -3375,6 +3355,26 @@ namespace WindowsFormsApp2
 					this._Ngaytao = value;
 					this.SendPropertyChanged("Ngaytao");
 					this.OnNgaytaoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ngaythi", DbType="Date")]
+		public System.Nullable<System.DateTime> Ngaythi
+		{
+			get
+			{
+				return this._Ngaythi;
+			}
+			set
+			{
+				if ((this._Ngaythi != value))
+				{
+					this.OnNgaythiChanging(value);
+					this.SendPropertyChanging();
+					this._Ngaythi = value;
+					this.SendPropertyChanged("Ngaythi");
+					this.OnNgaythiChanged();
 				}
 			}
 		}
