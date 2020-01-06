@@ -39,7 +39,7 @@
             this.cmsXemdanhsachHs = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsThemHs = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsImportHs = new System.Windows.Forms.ToolStripMenuItem();
-            this.cmsExport = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsExportHs = new System.Windows.Forms.ToolStripMenuItem();
             this.giáoViênToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsXemdanhsachgv = new System.Windows.Forms.ToolStripMenuItem();
             this.cmsThemgiaovien = new System.Windows.Forms.ToolStripMenuItem();
@@ -200,7 +200,7 @@
             this.cmsXemdanhsachHs,
             this.cmsThemHs,
             this.cmsImportHs,
-            this.cmsExport});
+            this.cmsExportHs});
             this.họcSinhToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.họcSinhToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.họcSinhToolStripMenuItem.Name = "họcSinhToolStripMenuItem";
@@ -231,13 +231,13 @@
             this.cmsImportHs.Size = new System.Drawing.Size(261, 36);
             this.cmsImportHs.Text = "Import từ Excel";
             // 
-            // cmsExport
+            // cmsExportHs
             // 
-            this.cmsExport.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmsExport.ForeColor = System.Drawing.Color.White;
-            this.cmsExport.Name = "cmsExport";
-            this.cmsExport.Size = new System.Drawing.Size(261, 36);
-            this.cmsExport.Text = "Export dữ liệu";
+            this.cmsExportHs.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmsExportHs.ForeColor = System.Drawing.Color.White;
+            this.cmsExportHs.Name = "cmsExportHs";
+            this.cmsExportHs.Size = new System.Drawing.Size(261, 36);
+            this.cmsExportHs.Text = "Export dữ liệu";
             // 
             // giáoViênToolStripMenuItem
             // 
@@ -399,7 +399,7 @@
         private System.Windows.Forms.ToolStripMenuItem quảnTrịToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cmsXemdanhsachQt;
         private System.Windows.Forms.ToolStripMenuItem cmsThemquantri;
-        private System.Windows.Forms.ToolStripMenuItem cmsExport;
+        private System.Windows.Forms.ToolStripMenuItem cmsExportHs;
         private System.Windows.Forms.ToolStripMenuItem cmsImportGv;
         private System.Windows.Forms.ToolStripMenuItem cmsExportGiaovien;
         private System.Windows.Forms.ToolStripMenuItem chungToolStripMenuItem;

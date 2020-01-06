@@ -129,9 +129,8 @@
             this.lbLoi.ForeColor = System.Drawing.Color.DarkRed;
             this.lbLoi.Location = new System.Drawing.Point(227, 232);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(50, 20);
+            this.lbLoi.Size = new System.Drawing.Size(0, 20);
             this.lbLoi.TabIndex = 13;
-            this.lbLoi.Text = "lbLoi";
             // 
             // lbNgaysinh
             // 

@@ -141,11 +141,10 @@
             // lbLoi
             // 
             this.lbLoi.AutoSize = true;
-            this.lbLoi.Location = new System.Drawing.Point(127, 360);
+            this.lbLoi.Location = new System.Drawing.Point(127, 342);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(46, 17);
+            this.lbLoi.Size = new System.Drawing.Size(0, 17);
             this.lbLoi.TabIndex = 26;
-            this.lbLoi.Text = "label1";
             // 
             // lbNgaysinh
             // 
@@ -313,14 +312,14 @@
             this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.Black;
             this.xuiSlidingPanel1.TopRight = System.Drawing.Color.Black;
             // 
-            // fSuathongtinGv
+            // fSuathongtinGvQt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 509);
             this.Controls.Add(this.xuiFormDesign1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "fSuathongtinGv";
+            this.Name = "fSuathongtinGvQt";
             this.Text = "fSuathongtinGv";
             this.xuiFormDesign1.WorkingArea.ResumeLayout(false);
             this.xuiFormDesign1.ResumeLayout(false);

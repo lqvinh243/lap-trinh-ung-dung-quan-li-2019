@@ -13,6 +13,7 @@ namespace WindowsFormsApp2.FormHocSinh
     public partial class fThi : Form
     {
         public int i = 0, slDetoida, Khoi, Thoigian;
+        public bool Chon = false;
         public fThi()
         {
             InitializeComponent();
@@ -38,15 +39,28 @@ namespace WindowsFormsApp2.FormHocSinh
             this.btnPre.Click += BtnPre_Click;
             this.btnBatdau.Click += BtnBatdau_Click;
 
-            this.cbbKythi.SelectedValueChanged += CbbKythi_SelectedValueChanged;
+            this.cbbKythi.SelectedIndexChanged += CbbKythi_SelectedIndexChanged; ;
 
             this.txtMade.Enabled = false;
             this.txtMathisinh.Enabled = false;
             this.txtNgaythi.Enabled = false;
         }
 
+        private void CbbKythi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            i = 0;
+            this.btnPre.Enabled = false;
+            LoadMaDe(i, (int)this.cbbKythi.SelectedItem);
+            Chon = true;
+        }
+
         private void BtnBatdau_Click(object sender, EventArgs e)
         {
+            if (Chon == false)
+            {
+                MessageBox.Show("Vui lòng chọn kỳ thi để thi!");
+                return;
+            }
             if (MessageBox.Show("Bạn đã sẵn sàng để bắt đầu kỳ thi?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (var DB = new QTDataContext())
@@ -81,14 +95,6 @@ namespace WindowsFormsApp2.FormHocSinh
             }
             LoadMaDe(i, (int)this.cbbKythi.SelectedItem);
             this.btnPre.Enabled = true;
-        }
-
-        private void CbbKythi_SelectedValueChanged(object sender, EventArgs e)
-        {
-            i = 0;
-            this.btnPre.Enabled = false;
-            LoadMaDe(i, (int)this.cbbKythi.SelectedItem);
-            this.btnBatdau.Enabled = true;
         }
 
         private void BtnThoat_Click(object sender, EventArgs e)

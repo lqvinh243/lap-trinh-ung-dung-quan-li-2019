@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThemkythi));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbKhoi = new System.Windows.Forms.ComboBox();
             this.btnThoat = new XanderUI.XUISuperButton();
             this.lbLoi = new System.Windows.Forms.Label();
             this.lbHeader = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.lbKhoikythi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
-            this.cbbKhoi = new System.Windows.Forms.ComboBox();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -97,6 +97,15 @@
             this.panel1.Size = new System.Drawing.Size(657, 493);
             this.panel1.TabIndex = 12;
             // 
+            // cbbKhoi
+            // 
+            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKhoi.FormattingEnabled = true;
+            this.cbbKhoi.Location = new System.Drawing.Point(305, 136);
+            this.cbbKhoi.Name = "cbbKhoi";
+            this.cbbKhoi.Size = new System.Drawing.Size(164, 30);
+            this.cbbKhoi.TabIndex = 14;
+            // 
             // btnThoat
             // 
             this.btnThoat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(202)))), ((int)(((byte)(142)))));
@@ -126,9 +135,8 @@
             this.lbLoi.ForeColor = System.Drawing.Color.Red;
             this.lbLoi.Location = new System.Drawing.Point(302, 365);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(53, 20);
+            this.lbLoi.Size = new System.Drawing.Size(0, 20);
             this.lbLoi.TabIndex = 13;
-            this.lbLoi.Text = "label2";
             // 
             // lbHeader
             // 
@@ -260,15 +268,6 @@
             this.xuiSlidingPanel1.TabIndex = 11;
             this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.Black;
             this.xuiSlidingPanel1.TopRight = System.Drawing.Color.Black;
-            // 
-            // cbbKhoi
-            // 
-            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(305, 136);
-            this.cbbKhoi.Name = "cbbKhoi";
-            this.cbbKhoi.Size = new System.Drawing.Size(164, 30);
-            this.cbbKhoi.TabIndex = 14;
             // 
             // fThemkythi
             // 

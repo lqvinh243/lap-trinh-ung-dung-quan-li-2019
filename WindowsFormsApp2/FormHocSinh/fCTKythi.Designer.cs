@@ -31,19 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCTKythi));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
+            this.label2 = new System.Windows.Forms.Label();
             this.lbMotacauhoi = new System.Windows.Forms.Label();
             this.btnPre = new XanderUI.XUISuperButton();
             this.btnNext = new XanderUI.XUISuperButton();
             this.btnHoanthanh = new XanderUI.XUISuperButton();
             this.label1 = new System.Windows.Forms.Label();
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
-            this.lbMade = new System.Windows.Forms.Label();
-            this.txtMade = new System.Windows.Forms.TextBox();
-            this.txtNgaylam = new System.Windows.Forms.TextBox();
+            this.lbPhut = new System.Windows.Forms.Label();
+            this.lbThoigian = new System.Windows.Forms.Label();
             this.clbDapan = new System.Windows.Forms.CheckedListBox();
             this.timingthi = new System.Windows.Forms.Timer(this.components);
-            this.lbThoigian = new System.Windows.Forms.Label();
-            this.lbPhut = new System.Windows.Forms.Label();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
             this.xuiSlidingPanel1.SuspendLayout();
@@ -67,6 +65,7 @@
             // xuiFormDesign1.WorkingArea
             // 
             this.xuiFormDesign1.WorkingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
+            this.xuiFormDesign1.WorkingArea.Controls.Add(this.label2);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.lbMotacauhoi);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.btnPre);
             this.xuiFormDesign1.WorkingArea.Controls.Add(this.btnNext);
@@ -80,11 +79,22 @@
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1322, 590);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(719, 445);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 38);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "label2";
+            // 
             // lbMotacauhoi
             // 
             this.lbMotacauhoi.AutoSize = true;
             this.lbMotacauhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMotacauhoi.Location = new System.Drawing.Point(379, 30);
+            this.lbMotacauhoi.MaximumSize = new System.Drawing.Size(850, 0);
             this.lbMotacauhoi.Name = "lbMotacauhoi";
             this.lbMotacauhoi.Size = new System.Drawing.Size(108, 32);
             this.lbMotacauhoi.TabIndex = 27;
@@ -102,7 +112,7 @@
             this.btnPre.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnPre.HoverTextColor = System.Drawing.Color.White;
             this.btnPre.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnPre.Location = new System.Drawing.Point(659, 445);
+            this.btnPre.Location = new System.Drawing.Point(578, 445);
             this.btnPre.Name = "btnPre";
             this.btnPre.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnPre.SelectedTextColor = System.Drawing.Color.White;
@@ -124,7 +134,7 @@
             this.btnNext.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
             this.btnNext.HoverTextColor = System.Drawing.Color.White;
             this.btnNext.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnNext.Location = new System.Drawing.Point(825, 445);
+            this.btnNext.Location = new System.Drawing.Point(875, 445);
             this.btnNext.Name = "btnNext";
             this.btnNext.SelectedBackColor = System.Drawing.Color.LimeGreen;
             this.btnNext.SelectedTextColor = System.Drawing.Color.White;
@@ -175,9 +185,6 @@
             this.xuiSlidingPanel1.Collapsed = true;
             this.xuiSlidingPanel1.Controls.Add(this.lbPhut);
             this.xuiSlidingPanel1.Controls.Add(this.lbThoigian);
-            this.xuiSlidingPanel1.Controls.Add(this.lbMade);
-            this.xuiSlidingPanel1.Controls.Add(this.txtMade);
-            this.xuiSlidingPanel1.Controls.Add(this.txtNgaylam);
             this.xuiSlidingPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.xuiSlidingPanel1.HideControls = false;
             this.xuiSlidingPanel1.Location = new System.Drawing.Point(0, 0);
@@ -191,44 +198,16 @@
             this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.Black;
             this.xuiSlidingPanel1.TopRight = System.Drawing.Color.Black;
             // 
-            // lbMade
+            // lbPhut
             // 
-            this.lbMade.AutoSize = true;
-            this.lbMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMade.Location = new System.Drawing.Point(28, 77);
-            this.lbMade.Name = "lbMade";
-            this.lbMade.Size = new System.Drawing.Size(80, 29);
-            this.lbMade.TabIndex = 2;
-            this.lbMade.Text = "Mã đề";
-            // 
-            // txtMade
-            // 
-            this.txtMade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMade.Location = new System.Drawing.Point(125, 76);
-            this.txtMade.Name = "txtMade";
-            this.txtMade.Size = new System.Drawing.Size(41, 30);
-            this.txtMade.TabIndex = 2;
-            // 
-            // txtNgaylam
-            // 
-            this.txtNgaylam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaylam.Location = new System.Drawing.Point(12, 30);
-            this.txtNgaylam.Name = "txtNgaylam";
-            this.txtNgaylam.Size = new System.Drawing.Size(226, 28);
-            this.txtNgaylam.TabIndex = 2;
-            // 
-            // clbDapan
-            // 
-            this.clbDapan.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clbDapan.FormattingEnabled = true;
-            this.clbDapan.Location = new System.Drawing.Point(329, 136);
-            this.clbDapan.Name = "clbDapan";
-            this.clbDapan.Size = new System.Drawing.Size(844, 265);
-            this.clbDapan.TabIndex = 0;
-            // 
-            // timingthi
-            // 
-            this.timingthi.Interval = 1000;
+            this.lbPhut.AutoSize = true;
+            this.lbPhut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPhut.ForeColor = System.Drawing.Color.Red;
+            this.lbPhut.Location = new System.Drawing.Point(73, 287);
+            this.lbPhut.Name = "lbPhut";
+            this.lbPhut.Size = new System.Drawing.Size(71, 32);
+            this.lbPhut.TabIndex = 4;
+            this.lbPhut.Text = "phút";
             // 
             // lbThoigian
             // 
@@ -240,16 +219,18 @@
             this.lbThoigian.TabIndex = 3;
             this.lbThoigian.Text = "Thời gian còn lại";
             // 
-            // lbPhut
+            // clbDapan
             // 
-            this.lbPhut.AutoSize = true;
-            this.lbPhut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPhut.ForeColor = System.Drawing.Color.Red;
-            this.lbPhut.Location = new System.Drawing.Point(73, 287);
-            this.lbPhut.Name = "lbPhut";
-            this.lbPhut.Size = new System.Drawing.Size(71, 32);
-            this.lbPhut.TabIndex = 4;
-            this.lbPhut.Text = "phút";
+            this.clbDapan.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clbDapan.FormattingEnabled = true;
+            this.clbDapan.Location = new System.Drawing.Point(329, 136);
+            this.clbDapan.Name = "clbDapan";
+            this.clbDapan.Size = new System.Drawing.Size(844, 265);
+            this.clbDapan.TabIndex = 0;
+            // 
+            // timingthi
+            // 
+            this.timingthi.Interval = 1000;
             // 
             // fCTKythi
             // 
@@ -278,12 +259,10 @@
         private XanderUI.XUISuperButton btnHoanthanh;
         private System.Windows.Forms.Label label1;
         private XanderUI.XUISlidingPanel xuiSlidingPanel1;
-        private System.Windows.Forms.Label lbMade;
-        private System.Windows.Forms.TextBox txtMade;
-        private System.Windows.Forms.TextBox txtNgaylam;
         private System.Windows.Forms.CheckedListBox clbDapan;
         private System.Windows.Forms.Timer timingthi;
         private System.Windows.Forms.Label lbPhut;
         private System.Windows.Forms.Label lbThoigian;
+        private System.Windows.Forms.Label label2;
     }
 }

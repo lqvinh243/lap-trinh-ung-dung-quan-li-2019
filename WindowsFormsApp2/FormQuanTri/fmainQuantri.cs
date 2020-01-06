@@ -38,7 +38,7 @@ namespace WindowsFormsApp2.FormQuanTri
             this.cmsImportHs.Click += CmsImportHs_Click;
             this.cmsXemdanhsachHs.Click += CmsXemdanhsachHs_Click;
             this.cmsThemHs.Click += CmsThemHs_Click;
-            this.cmsExport.Click += CmsExport_Click;
+            this.cmsExportHs.Click += CmsExport_Click;
 
             //Giáo viên
             this.cmsExportGiaovien.Click += CmsExportGiaovien_Click;
@@ -68,6 +68,15 @@ namespace WindowsFormsApp2.FormQuanTri
 
         private void CmsXemdanhsachQt_Click(object sender, EventArgs e)
         {
+            using (var DB = new QTDataContext())
+            {
+                var check = DB.QuanTris;
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa tồn tại quản trị nào nên ko có danh sách!!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             fDanhsachnguoidung f = new fDanhsachnguoidung(3);
             f.ShowDialog();
         }
@@ -112,6 +121,15 @@ namespace WindowsFormsApp2.FormQuanTri
 
         private void CmsXemdanhsachgv_Click(object sender, EventArgs e)
         {
+            using (var DB = new QTDataContext())
+            {
+                var check = DB.GiaoViens;
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa tồn tại giáo viên nào nên ko có danh sách!!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             fDanhsachnguoidung f = new fDanhsachnguoidung(2);
             f.ShowDialog();
         }
@@ -124,12 +142,30 @@ namespace WindowsFormsApp2.FormQuanTri
 
         private void CmsExportGiaovien_Click(object sender, EventArgs e)
         {
+            using (var DB = new QTDataContext())
+            {
+                var check = DB.GiaoViens;
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa tồn tại giáo viên nào nên ko thể sử dụng chức năng này!!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             fExportData f = new fExportData(2);
             f.ShowDialog();
         }
 
         private void CmsExport_Click(object sender, EventArgs e)
         {
+            using (var DB = new QTDataContext())
+            {
+                var check = DB.HocSinhs;
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa tồn tại học sinh nào nên ko thể sử dụng chức năng này!!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             fExportData f = new fExportData(1);
             f.ShowDialog();
         }
@@ -142,12 +178,22 @@ namespace WindowsFormsApp2.FormQuanTri
 
         private void CmsImportHs_Click(object sender, EventArgs e)
         {
+            
             fImport f = new fImport(1);
             f.ShowDialog();
         }
 
         private void CmsXemdanhsachHs_Click(object sender, EventArgs e)
         {
+            using(var DB = new QTDataContext())
+            {
+                var check = DB.HocSinhs;
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa tồn tại học sinh nào nên ko có danh sách!!", "Thông báo", MessageBoxButtons.OK);
+                    return;
+                }
+            }
             fDanhsachnguoidung f = new fDanhsachnguoidung(1);
             f.ShowDialog();
         }

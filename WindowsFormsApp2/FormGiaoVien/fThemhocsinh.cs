@@ -75,6 +75,7 @@ namespace WindowsFormsApp2.FormGiaoVien
 
         public void LoadMade(int Khoimade)
         {
+            this.cbbIDMade.Items.Clear();
             var ListMade = DB.CT_KyThis.Where(idx => idx.IDKythi == IDkythi && idx.Khoikythi == Khoikythi && idx.Khoidethi == Khoimade).Select(idx => idx.IDMade);
             foreach (var vl in ListMade)
             {

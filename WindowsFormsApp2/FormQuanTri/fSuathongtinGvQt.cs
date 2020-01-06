@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -104,7 +105,7 @@ namespace WindowsFormsApp2.FormQuanTri
 
             using (var DB = new QTDataContext())
             {
-                var checktk = DB.NguoiDungs.Where(idx => idx.TaiKhoan == this.txtUsername.Text).FirstOrDefault();
+                var checktk = DB.NguoiDungs.Where(idx => idx.TaiKhoan == this.txtUsername.Text && idx.ID !=NguoiDung.ID).FirstOrDefault();
                 if (checktk != null)
                 {
                     this.lbLoi.Text = "Tài khoản đã tồn tại, vui lòng chọn tài khoản khác!";
@@ -141,7 +142,30 @@ namespace WindowsFormsApp2.FormQuanTri
                         if (UD["Matkhau"] == 1 && UD["Taikhoan"] == 1)
                         {
                             nd.TaiKhoan = this.txtUsername.Text;
-                            nd.Matkhau = this.txtPassword.Text;
+                            
+                            var Pw = this.txtPassword.Text;
+                            var sha = new SHA1CryptoServiceProvider();
+
+                            //get time Now with Millisecond
+                            var strTimeNow = DateTime.Now.Millisecond.ToString();
+
+                            //Convert to ASCII
+                            var arrByte = ASCIIEncoding.ASCII.GetBytes(Pw);
+                            var arrByteTimeN = ASCIIEncoding.ASCII.GetBytes(strTimeNow);
+
+                            //create array byte with size arrByte and size arrByteTime
+                            var arrStrSalt = new byte[arrByte.Length + arrByteTimeN.Length];
+
+                            Array.Copy(arrByte, arrStrSalt, arrByte.Length);
+                            Array.Copy(arrByteTimeN, 0, arrStrSalt, arrByte.Length, arrByteTimeN.Length);
+
+
+                            var arrPwHash = sha.ComputeHash(arrStrSalt);
+                            var arrPwSaltHashed = new byte[arrPwHash.Length + arrByteTimeN.Length];
+                            Array.Copy(arrPwHash, arrPwSaltHashed, arrPwHash.Length);
+                            Array.Copy(arrByteTimeN, 0, arrPwSaltHashed, arrPwHash.Length, arrByteTimeN.Length);
+                            var strPwHash = BitConverter.ToString(arrPwSaltHashed).Replace("-", "");
+                            nd.Matkhau  = strPwHash;
                         }
                         
                         DB.SubmitChanges();
@@ -267,10 +291,12 @@ namespace WindowsFormsApp2.FormQuanTri
                     this.txtHoten.Text = QT.Hoten;
                     this.txtUsername.Text = NguoiDung.TaiKhoan;
                     this.txtPassword.Text = NguoiDung.Matkhau;
-                    this.dtpNgaysinh.Text = QT.Ngaysinh == null ? DateTime.Now.ToShortDateString() : GV.Ngaysinh.Value.ToShortDateString();
-                }
-                
-                
+                    if (QT.Ngaysinh != null)
+                    {
+                        this.dtpNgaysinh.Value = QT.Ngaysinh.Value;
+                    }
+                     
+                } 
             }
 
         }

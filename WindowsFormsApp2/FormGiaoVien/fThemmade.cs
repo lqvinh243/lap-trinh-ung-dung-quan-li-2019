@@ -14,6 +14,7 @@ namespace WindowsFormsApp2.FormGiaoVien
     {
         public int ID, Khoi;
         public bool Chon = false;
+        QTDataContext DB = new QTDataContext();
         public fThemmade(int iDKythi, int khoikythi)
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace WindowsFormsApp2.FormGiaoVien
             this.Text = "Thêm mã đề cho kỳ thi";
             this.txtKhoi.Text = Khoi.ToString();
             this.txtKythi.Text = ID.ToString();
-            LoadDulieu();
+            LoadDanhsachde();
         }
 
         private void LoadControl(object sender, EventArgs e)
@@ -41,60 +42,65 @@ namespace WindowsFormsApp2.FormGiaoVien
             //Thoát
             this.btnThoat.Click += BtnThoat_Click;
             //Chọn mã đề
-            this.cbbKhoi.SelectedIndexChanged += CbbKhoi_SelectedIndexChanged;
+            this.dgvMade.CellClick += DgvMade_CellClick;
 
             //Thêm
             this.btnThemmade.Click += BtnThemmade_Click;
+
+
+            this.FormClosing += FThemmade_FormClosing;
+        }
+
+        private void FThemmade_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DB.Dispose();
+        }
+
+        private void DgvMade_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex > -1)
+            {
+                Chon = true;
+            }
+            else Chon = false;
         }
 
         private void BtnThemmade_Click(object sender, EventArgs e)
         {
-            
+
             if (Chon == false)
             {
-                this.lbLoi.Text = "Vui lòng chọn khối!";
-                lbLoi.Left = (this.panel1.Width - lbLoi.Size.Width) / 2; 
-                return;
-            }
-            int Khoichon = int.Parse(this.cbbKhoi.SelectedItem.ToString());
-            if (Khoichon == 0)
-            {
-                this.lbLoi.Text = "0 là số mặc định vui lòng chọn khối";
-                lbLoi.Left = (this.panel1.Width - lbLoi.Size.Width) / 2;
-                return;
-            }
-            int Madechon = int.Parse(this.cbbMade.SelectedItem.ToString());
-            if (Madechon == 0)
-            {
-                this.lbLoi.Text = "0 là số mặc định vui lòng chọn mã đề";
+                this.lbLoi.Text = "Vui lòng chọn mã đề!";
                 lbLoi.Left = (this.panel1.Width - lbLoi.Size.Width) / 2;
                 return;
             }
 
-            if (Khoi != Khoichon)
-            {
-                if (MessageBox.Show("Khối mã đề bạn chọn hiện đang không dành cho kỳ thi khối hiện tại,bạn có chắc thêm mã đề này?", "Xác nhận thêm", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
-                    return;
-                } 
-            }
             else if (MessageBox.Show("Bạn có chắc chắn thêm mã đề này?", "Xác nhận thêm", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 return;
             }
             using (var DB = new QTDataContext())
             {
-                var Made = DB.CT_MaDes.Where(idx => idx.Khoimade == Khoichon && idx.IDMade == Madechon);
+                int idy = dgvMade.SelectedCells[0].RowIndex;
+                DataGridViewRow slr = dgvMade.Rows[idy];
+                int IDmade = int.Parse(slr.Cells[0].Value.ToString());
+                var Made = DB.CT_MaDes.Where(idx => idx.Khoimade == Khoi && idx.IDMade == IDmade);
                 if (Made.Count() <= 0)
                 {
                     MessageBox.Show("Không thể thêm mã đề này vì mã đề chưa tồn tại câu hỏi nào!!", "Xác nhận");
                     return;
                 }
+                var Madetontai = DB.CT_KyThis.Where(idx => idx.IDMade == IDmade && idx.Khoidethi == Khoi && idx.IDKythi == ID && idx.Khoikythi == Khoi).SingleOrDefault();
+                if (Madetontai != null)
+                {
+                    MessageBox.Show("Kỳ thi đã tồn tại mà đề này!!");
+                    return;
+                }
                 CT_KyThi ct = new CT_KyThi();
                 ct.IDKythi = ID;
                 ct.Khoikythi = Khoi;
-                ct.Khoidethi = Khoichon;
-                ct.IDMade = Madechon;
+                ct.Khoidethi = Khoi;
+                ct.IDMade = IDmade;
                 try
                 {
                     DB.CT_KyThis.InsertOnSubmit(ct);
@@ -110,42 +116,12 @@ namespace WindowsFormsApp2.FormGiaoVien
             }
         }
 
-        private void CbbKhoi_SelectedIndexChanged(object sender, EventArgs e)
+        public void LoadDanhsachde()
         {
-            this.cbbMade.Items.Clear();
-
-            int KhoiChon = int.Parse(this.cbbKhoi.SelectedItem.ToString());
-            this.cbbMade.Items.Add(0);
-            this.cbbMade.SelectedIndex = 0;
-            using (var DB = new QTDataContext())
-            {
-                var ListMade = DB.MaDes.Where(idx => idx.Khoi == KhoiChon).Select(idx => idx.ID);
-                var ListMadeco = DB.CT_KyThis.Where(idx => idx.IDKythi == ID && idx.Khoikythi == Khoi).Select(idx => idx.IDMade);
-                ListMade = ListMade.Distinct();
-                foreach (var vl in ListMade)
-                {
-                    if (!ListMadeco.Contains(vl))
-                    {
-                        this.cbbMade.Items.Add(vl);
-                    }
-
-                }
-            }
-            Chon = true;
-        }
-
-        public void LoadDulieu()
-        {
-            this.cbbKhoi.Items.Add(0);
-            using (var DB = new QTDataContext())
-            {
-                var listKhoi = DB.MaDes.Select(idx => idx.Khoi);
-                listKhoi = listKhoi.Distinct();
-                foreach (var vl in listKhoi)
-                {
-                    this.cbbKhoi.Items.Add(vl);
-                }
-            }
+            var ListMade = DB.MaDes.Where(idx => idx.Khoi == Khoi).Select(idx=>new { IDMade = idx.ID }).ToList();
+            var ListMadeco = DB.CT_KyThis.Where(idx => idx.IDKythi == ID && idx.Khoikythi == Khoi).Select(idx => new { IDMade = idx.IDMade });
+            dgvMade.DataSource = ListMade;
+            this.dgvMade.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void BtnThoat_Click(object sender, EventArgs e)

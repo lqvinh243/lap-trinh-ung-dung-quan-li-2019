@@ -66,7 +66,7 @@ namespace WindowsFormsApp2.FormHocSinh
                 var layMot = onLuyens.Skip(i).Take(1);
                 foreach (var vl in layMot)
                 {
-                    this.txtDiemso.Text = vl.Diem.ToString();
+                    this.txtDiemso.Text = string.Format("{0:0.0}", vl.Diem);
                     this.txtMade.Text = vl.Made.ToString();
                     this.txtNgay.Text = vl.Ngaylam.ToShortDateString();
                     this.txtThoigian.Text = vl.Ngaylam.ToShortTimeString();
@@ -93,7 +93,7 @@ namespace WindowsFormsApp2.FormHocSinh
             this.txtThoigian.Enabled = false;
             this.txtThoigianra.Enabled = false;
             this.txtThoigianlam.Enabled = false;
-
+            this.CenterToParent();
 
             this.btnThoat.Click += BtnThoat_Click;
             this.btnNext.Click += BtnNext_Click;

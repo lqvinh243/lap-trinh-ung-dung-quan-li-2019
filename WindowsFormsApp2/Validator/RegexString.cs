@@ -8,7 +8,7 @@ namespace WindowsFormsApp2.Validatior
 {
     public class RegexString
     {
-        public static string Khoi = @"^([1-9]|1[012])$";
+        public static string Khoi = @"^(1[012])$";
         public static string Lop = @"^[1-9]$";
         public static string Number = @"^[0-9]+$";
         public static string Tinh = @"^[0-1]$";

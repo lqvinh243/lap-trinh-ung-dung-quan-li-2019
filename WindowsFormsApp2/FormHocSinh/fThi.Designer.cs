@@ -44,8 +44,6 @@
             this.txtMade = new System.Windows.Forms.TextBox();
             this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
             this.xuiClock1 = new XanderUI.XUIClock();
-            this.lbKhoi = new System.Windows.Forms.Label();
-            this.txtKhoi = new System.Windows.Forms.TextBox();
             this.fXOnluyen.WorkingArea.SuspendLayout();
             this.fXOnluyen.SuspendLayout();
             this.xuiSlidingPanel1.SuspendLayout();
@@ -69,8 +67,6 @@
             // fXOnluyen.WorkingArea
             // 
             this.fXOnluyen.WorkingArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
-            this.fXOnluyen.WorkingArea.Controls.Add(this.lbKhoi);
-            this.fXOnluyen.WorkingArea.Controls.Add(this.txtKhoi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.lbChonkythi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.cbbKythi);
             this.fXOnluyen.WorkingArea.Controls.Add(this.lbMathisinh);
@@ -294,24 +290,6 @@
             this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             // 
-            // lbKhoi
-            // 
-            this.lbKhoi.AutoSize = true;
-            this.lbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbKhoi.Location = new System.Drawing.Point(298, 204);
-            this.lbKhoi.Name = "lbKhoi";
-            this.lbKhoi.Size = new System.Drawing.Size(62, 29);
-            this.lbKhoi.TabIndex = 23;
-            this.lbKhoi.Text = "Khối";
-            // 
-            // txtKhoi
-            // 
-            this.txtKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhoi.Location = new System.Drawing.Point(366, 204);
-            this.txtKhoi.Name = "txtKhoi";
-            this.txtKhoi.Size = new System.Drawing.Size(56, 41);
-            this.txtKhoi.TabIndex = 24;
-            // 
             // fThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -346,7 +324,5 @@
         private System.Windows.Forms.TextBox txtNgaythi;
         private System.Windows.Forms.Label lbChonkythi;
         private System.Windows.Forms.ComboBox cbbKythi;
-        private System.Windows.Forms.Label lbKhoi;
-        private System.Windows.Forms.TextBox txtKhoi;
     }
 }

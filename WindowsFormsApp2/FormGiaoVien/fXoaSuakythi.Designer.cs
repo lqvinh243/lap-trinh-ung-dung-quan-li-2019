@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fXoaSuakythi));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
+            this.lbLockhoi = new System.Windows.Forms.Label();
+            this.cbbKhoi = new System.Windows.Forms.ComboBox();
             this.btnDanhsachHs = new XanderUI.XUIButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnThemmade = new XanderUI.XUIButton();
@@ -38,6 +40,7 @@
             this.dgvMade = new System.Windows.Forms.DataGridView();
             this.btnThoat = new XanderUI.XUISuperButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbThithu = new XanderUI.XUICheckBox();
             this.lbThoigian = new System.Windows.Forms.Label();
             this.txtThoigian = new System.Windows.Forms.TextBox();
             this.lbLoi = new System.Windows.Forms.Label();
@@ -56,9 +59,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvKythi = new System.Windows.Forms.DataGridView();
-            this.cbThithu = new XanderUI.XUICheckBox();
-            this.cbbKhoi = new System.Windows.Forms.ComboBox();
-            this.lbLockhoi = new System.Windows.Forms.Label();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMade)).BeginInit();
@@ -101,6 +101,25 @@
             this.xuiFormDesign1.WorkingArea.Name = "WorkingArea";
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1327, 591);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
+            // 
+            // lbLockhoi
+            // 
+            this.lbLockhoi.AutoSize = true;
+            this.lbLockhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLockhoi.Location = new System.Drawing.Point(165, 519);
+            this.lbLockhoi.Name = "lbLockhoi";
+            this.lbLockhoi.Size = new System.Drawing.Size(48, 24);
+            this.lbLockhoi.TabIndex = 12;
+            this.lbLockhoi.Text = "Khối";
+            // 
+            // cbbKhoi
+            // 
+            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKhoi.FormattingEnabled = true;
+            this.cbbKhoi.Location = new System.Drawing.Point(233, 516);
+            this.cbbKhoi.Name = "cbbKhoi";
+            this.cbbKhoi.Size = new System.Drawing.Size(121, 30);
+            this.cbbKhoi.TabIndex = 11;
             // 
             // btnDanhsachHs
             // 
@@ -238,6 +257,22 @@
             this.panel1.Size = new System.Drawing.Size(411, 402);
             this.panel1.TabIndex = 2;
             // 
+            // cbThithu
+            // 
+            this.cbThithu.CheckboxCheckColor = System.Drawing.Color.White;
+            this.cbThithu.CheckboxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(250)))));
+            this.cbThithu.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
+            this.cbThithu.CheckboxStyle = XanderUI.XUICheckBox.Style.Material;
+            this.cbThithu.Checked = false;
+            this.cbThithu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbThithu.ForeColor = System.Drawing.Color.Black;
+            this.cbThithu.Location = new System.Drawing.Point(280, 260);
+            this.cbThithu.Name = "cbThithu";
+            this.cbThithu.Size = new System.Drawing.Size(100, 20);
+            this.cbThithu.TabIndex = 21;
+            this.cbThithu.Text = "Thi thử";
+            this.cbThithu.TickThickness = 2;
+            // 
             // lbThoigian
             // 
             this.lbThoigian.AutoSize = true;
@@ -263,9 +298,8 @@
             this.lbLoi.ForeColor = System.Drawing.Color.Red;
             this.lbLoi.Location = new System.Drawing.Point(169, 304);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(39, 18);
+            this.lbLoi.Size = new System.Drawing.Size(0, 18);
             this.lbLoi.TabIndex = 18;
-            this.lbLoi.Text = "lbLoi";
             // 
             // dtpNgaythi
             // 
@@ -430,41 +464,6 @@
             this.dgvKythi.RowTemplate.Height = 24;
             this.dgvKythi.Size = new System.Drawing.Size(541, 493);
             this.dgvKythi.TabIndex = 0;
-            // 
-            // cbThithu
-            // 
-            this.cbThithu.CheckboxCheckColor = System.Drawing.Color.White;
-            this.cbThithu.CheckboxColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(162)))), ((int)(((byte)(250)))));
-            this.cbThithu.CheckboxHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(55)))), ((int)(((byte)(98)))));
-            this.cbThithu.CheckboxStyle = XanderUI.XUICheckBox.Style.Material;
-            this.cbThithu.Checked = false;
-            this.cbThithu.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbThithu.ForeColor = System.Drawing.Color.Black;
-            this.cbThithu.Location = new System.Drawing.Point(280, 260);
-            this.cbThithu.Name = "cbThithu";
-            this.cbThithu.Size = new System.Drawing.Size(100, 20);
-            this.cbThithu.TabIndex = 21;
-            this.cbThithu.Text = "Thi thử";
-            this.cbThithu.TickThickness = 2;
-            // 
-            // cbbKhoi
-            // 
-            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(233, 516);
-            this.cbbKhoi.Name = "cbbKhoi";
-            this.cbbKhoi.Size = new System.Drawing.Size(121, 30);
-            this.cbbKhoi.TabIndex = 11;
-            // 
-            // lbLockhoi
-            // 
-            this.lbLockhoi.AutoSize = true;
-            this.lbLockhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLockhoi.Location = new System.Drawing.Point(165, 519);
-            this.lbLockhoi.Name = "lbLockhoi";
-            this.lbLockhoi.Size = new System.Drawing.Size(48, 24);
-            this.lbLockhoi.TabIndex = 12;
-            this.lbLockhoi.Text = "Khối";
             // 
             // fXoaSuakythi
             // 

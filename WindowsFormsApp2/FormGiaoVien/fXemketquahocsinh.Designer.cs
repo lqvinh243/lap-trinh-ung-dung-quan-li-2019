@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fXemketquahocsinh));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
-            this.dgvKetqua = new System.Windows.Forms.DataGridView();
-            this.txtIDhs = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.lbID = new System.Windows.Forms.Label();
+            this.lbLoi = new System.Windows.Forms.Label();
+            this.txtIDhs = new System.Windows.Forms.TextBox();
             this.btnXem = new XanderUI.XUIButton();
             this.btnThoat = new XanderUI.XUISuperButton();
-            this.lbLoi = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvKetqua = new System.Windows.Forms.DataGridView();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKetqua)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetqua)).BeginInit();
             this.SuspendLayout();
             // 
             // xuiFormDesign1
@@ -70,23 +70,16 @@
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1000, 686);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
-            // dgvKetqua
+            // panel1
             // 
-            this.dgvKetqua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKetqua.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgvKetqua.Location = new System.Drawing.Point(0, 0);
-            this.dgvKetqua.Name = "dgvKetqua";
-            this.dgvKetqua.RowTemplate.Height = 24;
-            this.dgvKetqua.Size = new System.Drawing.Size(765, 686);
-            this.dgvKetqua.TabIndex = 0;
-            // 
-            // txtIDhs
-            // 
-            this.txtIDhs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDhs.Location = new System.Drawing.Point(18, 85);
-            this.txtIDhs.Name = "txtIDhs";
-            this.txtIDhs.Size = new System.Drawing.Size(193, 28);
-            this.txtIDhs.TabIndex = 1;
+            this.panel1.Controls.Add(this.lbID);
+            this.panel1.Controls.Add(this.lbLoi);
+            this.panel1.Controls.Add(this.txtIDhs);
+            this.panel1.Controls.Add(this.btnXem);
+            this.panel1.Location = new System.Drawing.Point(768, 142);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(232, 287);
+            this.panel1.TabIndex = 6;
             // 
             // lbID
             // 
@@ -97,6 +90,24 @@
             this.lbID.Size = new System.Drawing.Size(161, 25);
             this.lbID.TabIndex = 2;
             this.lbID.Text = "Nhập ID học sinh";
+            // 
+            // lbLoi
+            // 
+            this.lbLoi.AutoSize = true;
+            this.lbLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLoi.ForeColor = System.Drawing.Color.Red;
+            this.lbLoi.Location = new System.Drawing.Point(90, 143);
+            this.lbLoi.Name = "lbLoi";
+            this.lbLoi.Size = new System.Drawing.Size(0, 18);
+            this.lbLoi.TabIndex = 5;
+            // 
+            // txtIDhs
+            // 
+            this.txtIDhs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDhs.Location = new System.Drawing.Point(18, 85);
+            this.txtIDhs.Name = "txtIDhs";
+            this.txtIDhs.Size = new System.Drawing.Size(193, 28);
+            this.txtIDhs.TabIndex = 1;
             // 
             // btnXem
             // 
@@ -140,27 +151,15 @@
             this.btnThoat.TextColor = System.Drawing.Color.White;
             this.btnThoat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // lbLoi
+            // dgvKetqua
             // 
-            this.lbLoi.AutoSize = true;
-            this.lbLoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbLoi.ForeColor = System.Drawing.Color.Red;
-            this.lbLoi.Location = new System.Drawing.Point(90, 143);
-            this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(39, 18);
-            this.lbLoi.TabIndex = 5;
-            this.lbLoi.Text = "lbLoi";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.lbID);
-            this.panel1.Controls.Add(this.lbLoi);
-            this.panel1.Controls.Add(this.txtIDhs);
-            this.panel1.Controls.Add(this.btnXem);
-            this.panel1.Location = new System.Drawing.Point(768, 142);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(232, 287);
-            this.panel1.TabIndex = 6;
+            this.dgvKetqua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKetqua.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvKetqua.Location = new System.Drawing.Point(0, 0);
+            this.dgvKetqua.Name = "dgvKetqua";
+            this.dgvKetqua.RowTemplate.Height = 24;
+            this.dgvKetqua.Size = new System.Drawing.Size(765, 686);
+            this.dgvKetqua.TabIndex = 0;
             // 
             // fXemketquahocsinh
             // 
@@ -173,9 +172,9 @@
             this.Text = "fXemketquahocsinh";
             this.xuiFormDesign1.WorkingArea.ResumeLayout(false);
             this.xuiFormDesign1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKetqua)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetqua)).EndInit();
             this.ResumeLayout(false);
 
         }

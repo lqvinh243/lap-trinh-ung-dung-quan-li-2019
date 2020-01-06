@@ -155,7 +155,7 @@ namespace WindowsFormsApp2.FormHocSinh
                     var lMot = lqLoadDiem.Skip(i).Take(1);
                     foreach (var et in lMot)
                     {
-                        this.txtDiemso.Text = et.Diem.ToString();
+                        this.txtDiemso.Text = string.Format("{0:0.0}", et.Diem);
                         this.txtMade.Text = et.IDMade.ToString();
                         this.txtKythi.Text = et.IDKythi.ToString();
                         this.txtNgaythi.Text = et.CT_KyThi.KyThi.Ngaythi.Value.ToShortDateString();

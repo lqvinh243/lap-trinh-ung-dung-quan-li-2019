@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fThongkekythi));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
-            this.dgvHocsinh = new System.Windows.Forms.DataGridView();
-            this.txtIDkythi = new System.Windows.Forms.TextBox();
-            this.cbbKhoi = new System.Windows.Forms.ComboBox();
-            this.lbIDkythi = new System.Windows.Forms.Label();
-            this.lbKhoi = new System.Windows.Forms.Label();
-            this.btnXem = new XanderUI.XUIButton();
-            this.btnThoat = new XanderUI.XUISuperButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbLoi = new System.Windows.Forms.Label();
+            this.lbKhoi = new System.Windows.Forms.Label();
+            this.txtIDkythi = new System.Windows.Forms.TextBox();
+            this.btnXem = new XanderUI.XUIButton();
+            this.cbbKhoi = new System.Windows.Forms.ComboBox();
+            this.lbIDkythi = new System.Windows.Forms.Label();
+            this.btnThoat = new XanderUI.XUISuperButton();
+            this.dgvHocsinh = new System.Windows.Forms.DataGridView();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).BeginInit();
             this.SuspendLayout();
             // 
             // xuiFormDesign1
@@ -72,42 +72,27 @@
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1203, 625);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
-            // dgvHocsinh
+            // panel1
             // 
-            this.dgvHocsinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvHocsinh.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgvHocsinh.Location = new System.Drawing.Point(0, 0);
-            this.dgvHocsinh.Name = "dgvHocsinh";
-            this.dgvHocsinh.RowTemplate.Height = 24;
-            this.dgvHocsinh.Size = new System.Drawing.Size(922, 625);
-            this.dgvHocsinh.TabIndex = 0;
+            this.panel1.Controls.Add(this.lbLoi);
+            this.panel1.Controls.Add(this.lbKhoi);
+            this.panel1.Controls.Add(this.txtIDkythi);
+            this.panel1.Controls.Add(this.btnXem);
+            this.panel1.Controls.Add(this.cbbKhoi);
+            this.panel1.Controls.Add(this.lbIDkythi);
+            this.panel1.Location = new System.Drawing.Point(928, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(268, 380);
+            this.panel1.TabIndex = 7;
             // 
-            // txtIDkythi
+            // lbLoi
             // 
-            this.txtIDkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDkythi.Location = new System.Drawing.Point(65, 172);
-            this.txtIDkythi.Name = "txtIDkythi";
-            this.txtIDkythi.Size = new System.Drawing.Size(127, 28);
-            this.txtIDkythi.TabIndex = 1;
-            // 
-            // cbbKhoi
-            // 
-            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbKhoi.FormattingEnabled = true;
-            this.cbbKhoi.Location = new System.Drawing.Point(65, 75);
-            this.cbbKhoi.Name = "cbbKhoi";
-            this.cbbKhoi.Size = new System.Drawing.Size(121, 30);
-            this.cbbKhoi.TabIndex = 2;
-            // 
-            // lbIDkythi
-            // 
-            this.lbIDkythi.AutoSize = true;
-            this.lbIDkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbIDkythi.Location = new System.Drawing.Point(66, 134);
-            this.lbIDkythi.Name = "lbIDkythi";
-            this.lbIDkythi.Size = new System.Drawing.Size(81, 25);
-            this.lbIDkythi.TabIndex = 3;
-            this.lbIDkythi.Text = "ID kỳ thi";
+            this.lbLoi.AutoSize = true;
+            this.lbLoi.ForeColor = System.Drawing.Color.Red;
+            this.lbLoi.Location = new System.Drawing.Point(110, 228);
+            this.lbLoi.Name = "lbLoi";
+            this.lbLoi.Size = new System.Drawing.Size(0, 17);
+            this.lbLoi.TabIndex = 6;
             // 
             // lbKhoi
             // 
@@ -118,6 +103,14 @@
             this.lbKhoi.Size = new System.Drawing.Size(52, 25);
             this.lbKhoi.TabIndex = 4;
             this.lbKhoi.Text = "Khối";
+            // 
+            // txtIDkythi
+            // 
+            this.txtIDkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDkythi.Location = new System.Drawing.Point(65, 172);
+            this.txtIDkythi.Name = "txtIDkythi";
+            this.txtIDkythi.Size = new System.Drawing.Size(127, 28);
+            this.txtIDkythi.TabIndex = 1;
             // 
             // btnXem
             // 
@@ -138,6 +131,25 @@
             this.btnXem.TabIndex = 5;
             this.btnXem.TextColor = System.Drawing.Color.DodgerBlue;
             this.btnXem.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // cbbKhoi
+            // 
+            this.cbbKhoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbKhoi.FormattingEnabled = true;
+            this.cbbKhoi.Location = new System.Drawing.Point(65, 75);
+            this.cbbKhoi.Name = "cbbKhoi";
+            this.cbbKhoi.Size = new System.Drawing.Size(121, 30);
+            this.cbbKhoi.TabIndex = 2;
+            // 
+            // lbIDkythi
+            // 
+            this.lbIDkythi.AutoSize = true;
+            this.lbIDkythi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbIDkythi.Location = new System.Drawing.Point(66, 134);
+            this.lbIDkythi.Name = "lbIDkythi";
+            this.lbIDkythi.Size = new System.Drawing.Size(81, 25);
+            this.lbIDkythi.TabIndex = 3;
+            this.lbIDkythi.Text = "ID kỳ thi";
             // 
             // btnThoat
             // 
@@ -161,28 +173,15 @@
             this.btnThoat.TextColor = System.Drawing.Color.White;
             this.btnThoat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             // 
-            // panel1
+            // dgvHocsinh
             // 
-            this.panel1.Controls.Add(this.lbLoi);
-            this.panel1.Controls.Add(this.lbKhoi);
-            this.panel1.Controls.Add(this.txtIDkythi);
-            this.panel1.Controls.Add(this.btnXem);
-            this.panel1.Controls.Add(this.cbbKhoi);
-            this.panel1.Controls.Add(this.lbIDkythi);
-            this.panel1.Location = new System.Drawing.Point(928, 71);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 380);
-            this.panel1.TabIndex = 7;
-            // 
-            // lbLoi
-            // 
-            this.lbLoi.AutoSize = true;
-            this.lbLoi.ForeColor = System.Drawing.Color.Red;
-            this.lbLoi.Location = new System.Drawing.Point(110, 228);
-            this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(38, 17);
-            this.lbLoi.TabIndex = 6;
-            this.lbLoi.Text = "lbLoi";
+            this.dgvHocsinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHocsinh.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dgvHocsinh.Location = new System.Drawing.Point(0, 0);
+            this.dgvHocsinh.Name = "dgvHocsinh";
+            this.dgvHocsinh.RowTemplate.Height = 24;
+            this.dgvHocsinh.Size = new System.Drawing.Size(922, 625);
+            this.dgvHocsinh.TabIndex = 0;
             // 
             // fThongkekythi
             // 
@@ -195,9 +194,9 @@
             this.Text = "fThongkekythi";
             this.xuiFormDesign1.WorkingArea.ResumeLayout(false);
             this.xuiFormDesign1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHocsinh)).EndInit();
             this.ResumeLayout(false);
 
         }

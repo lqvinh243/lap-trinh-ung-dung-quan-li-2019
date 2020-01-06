@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -36,7 +37,7 @@ namespace WindowsFormsApp2.FormQuanTri
 
             var rq1 = new RequiredInputValidator();
             rq1.Controltovalidate = this.txtCMND;
-            
+
 
             var rgx = new ValidatorN();
             rgx.i = 1;
@@ -59,7 +60,8 @@ namespace WindowsFormsApp2.FormQuanTri
             this.txtID.Enabled = false;
             this.btnHuy.Click += BtnHuy_Click;
             this.btnCapnhat.Click += BtnCapnhat_Click;
-
+            this.txtLop.Enabled = false;
+            this.txtKhoi.Enabled = false;
             this.txtCMND.TextChanged += TxtCMND_TextChanged;
             this.txtHoten.TextChanged += TxtHoten_TextChanged;
             this.txtKhoi.TextChanged += TxtKhoi_TextChanged;
@@ -74,7 +76,8 @@ namespace WindowsFormsApp2.FormQuanTri
             if (dtpNgaysinh.Value != HS.Ngaysinh)
             {
                 UD["Ngaysinh"] = 1;
-            } else UD["Ngaysinh"] = 0;
+            }
+            else UD["Ngaysinh"] = 0;
         }
 
         private void TxtPassword_TextChanged(object sender, EventArgs e)
@@ -198,7 +201,7 @@ namespace WindowsFormsApp2.FormQuanTri
                 {
                     using (var DB = new QTDataContext())
                     {
-                        
+
                         var nd = DB.NguoiDungs.Where(idx => idx.CMND == ID.ToString()).SingleOrDefault();
                         var hs = DB.HocSinhs.Where(idx => idx.ID == nd.ID).SingleOrDefault();
                         if (UD["Hoten"] == 1)
@@ -212,9 +215,32 @@ namespace WindowsFormsApp2.FormQuanTri
                         if (UD["Matkhau"] == 1 && UD["Taikhoan"] == 1)
                         {
                             nd.TaiKhoan = this.txtUsername.Text;
-                            nd.Matkhau = this.txtPassword.Text;
+
+                            var Pw = this.txtPassword.Text;
+                            var sha = new SHA1CryptoServiceProvider();
+
+                            //get time Now with Millisecond
+                            var strTimeNow = DateTime.Now.Millisecond.ToString();
+
+                            //Convert to ASCII
+                            var arrByte = ASCIIEncoding.ASCII.GetBytes(Pw);
+                            var arrByteTimeN = ASCIIEncoding.ASCII.GetBytes(strTimeNow);
+
+                            //create array byte with size arrByte and size arrByteTime
+                            var arrStrSalt = new byte[arrByte.Length + arrByteTimeN.Length];
+
+                            Array.Copy(arrByte, arrStrSalt, arrByte.Length);
+                            Array.Copy(arrByteTimeN, 0, arrStrSalt, arrByte.Length, arrByteTimeN.Length);
+
+
+                            var arrPwHash = sha.ComputeHash(arrStrSalt);
+                            var arrPwSaltHashed = new byte[arrPwHash.Length + arrByteTimeN.Length];
+                            Array.Copy(arrPwHash, arrPwSaltHashed, arrPwHash.Length);
+                            Array.Copy(arrByteTimeN, 0, arrPwSaltHashed, arrPwHash.Length, arrByteTimeN.Length);
+                            var strPwHash = BitConverter.ToString(arrPwSaltHashed).Replace("-", "");
+                            nd.Matkhau = strPwHash;
                         }
-                        if(UD["Ngaysinh"] == 1)
+                        if (UD["Ngaysinh"] == 1)
                         {
                             hs.Ngaysinh = this.dtpNgaysinh.Value;
                         }

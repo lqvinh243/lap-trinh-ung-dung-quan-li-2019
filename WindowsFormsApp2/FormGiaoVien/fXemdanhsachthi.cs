@@ -89,7 +89,7 @@ namespace WindowsFormsApp2.FormGiaoVien
                 dgvDanhsach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgvDanhsach.Columns.GetLastColumn(DataGridViewElementStates.Visible, DataGridViewElementStates.None).AutoSizeMode =
                     DataGridViewAutoSizeColumnMode.Fill;
-
+                lbLoi.Text = "";
             }
         }
 

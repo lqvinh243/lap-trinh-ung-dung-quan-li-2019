@@ -48,6 +48,7 @@
             // 
             // xuiFormDesign1
             // 
+            this.xuiFormDesign1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xuiFormDesign1.ExitApplication = true;
             this.xuiFormDesign1.FormStyle = XanderUI.XUIFormDesign.Style.MacOS;
             this.xuiFormDesign1.Location = new System.Drawing.Point(0, 0);
@@ -56,7 +57,7 @@
             this.xuiFormDesign1.Name = "xuiFormDesign1";
             this.xuiFormDesign1.ShowMaximize = true;
             this.xuiFormDesign1.ShowMinimize = true;
-            this.xuiFormDesign1.Size = new System.Drawing.Size(1036, 719);
+            this.xuiFormDesign1.Size = new System.Drawing.Size(1041, 719);
             this.xuiFormDesign1.TabIndex = 0;
             this.xuiFormDesign1.TitleText = "Form Name";
             // 
@@ -68,7 +69,7 @@
             this.xuiFormDesign1.WorkingArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.xuiFormDesign1.WorkingArea.Location = new System.Drawing.Point(0, 39);
             this.xuiFormDesign1.WorkingArea.Name = "WorkingArea";
-            this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1036, 680);
+            this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(1041, 680);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
             // panel1
@@ -82,7 +83,7 @@
             this.panel1.Controls.Add(this.lbIDkythi);
             this.panel1.Controls.Add(this.cbKhoi);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(644, 0);
+            this.panel1.Location = new System.Drawing.Point(649, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(392, 680);
             this.panel1.TabIndex = 9;
@@ -138,9 +139,8 @@
             this.lbLoi.ForeColor = System.Drawing.Color.Red;
             this.lbLoi.Location = new System.Drawing.Point(167, 294);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(48, 24);
+            this.lbLoi.Size = new System.Drawing.Size(0, 24);
             this.lbLoi.TabIndex = 5;
-            this.lbLoi.Text = "Khối";
             // 
             // lbHeader
             // 

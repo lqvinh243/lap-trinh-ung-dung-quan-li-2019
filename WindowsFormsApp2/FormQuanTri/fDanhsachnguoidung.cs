@@ -14,7 +14,7 @@ namespace WindowsFormsApp2.FormQuanTri
     {
         public int Loai, Fill;
         public int Khoi, Lop;
-        public int i = 1, sltoida, page = 1;
+        public int i = 1, sltoida, page = 7;
         public fDanhsachnguoidung(int g)
         {
             InitializeComponent();

@@ -44,6 +44,7 @@ namespace WindowsFormsApp2.FormHocSinh
             else
             {
                 this.lbThoigian.Hide();
+                this.lbPhut.Hide();
             }
 
         }
@@ -57,7 +58,14 @@ namespace WindowsFormsApp2.FormHocSinh
         {
             Giay--;
             this.timingthi.Enabled = true;
-            this.lbPhut.Text = (Giay / 60).ToString() + " phút";
+            if (Giay > 60)
+            {
+                this.lbPhut.Text = (Giay / 60).ToString() + " phút";
+            }
+            else
+            {
+                this.lbPhut.Text = Giay.ToString() + " giây";
+            }
             if (Giay == 0)
             {
                 this.lbPhut.Text = "Hết giờ";
@@ -108,7 +116,6 @@ namespace WindowsFormsApp2.FormHocSinh
 
         public void LuuDapan()
         {
-
             try
             {
                 using (var DB = new QTDataContext())
@@ -188,7 +195,7 @@ namespace WindowsFormsApp2.FormHocSinh
                 Khoich = LoadCH.khoi;
                 string Mota = DB.CauHois.Where(idx => idx.ID == LoadCH.ID && idx.Khoi == LoadCH.khoi).Select(idx => idx.Mota).SingleOrDefault();
                 this.lbMotacauhoi.Text = Mota;
-
+                this.label2.Text = String.Format("{0}/{1}", i + 1, slCauhoi + 1);
                 var IDDapan = DB.CT_CauHois.Where(idx => idx.IDCauhoi == LoadCH.ID && idx.Khoi == LoadCH.khoi);
                 try
                 {
@@ -198,7 +205,7 @@ namespace WindowsFormsApp2.FormHocSinh
                         var check = LoadTable.Where(idx => idx.IDCauhoi == LoadCH.ID && idx.Khoicauhoi == LoadCH.khoi && idx.IDDapan == vl.IDdapan).Select(idx => idx.Traloi).SingleOrDefault();
 
                         DicIDDA.Add((vl.IDdapan, vl.Khoi), false);
-                        this.clbDapan.Items.Add(MotaDapan, (bool)check);
+                        this.clbDapan.Items.Add(vl.IDdapan.ToString() +". "  + MotaDapan, (bool)check);
                     }
                 }
                 catch (Exception)
@@ -216,6 +223,7 @@ namespace WindowsFormsApp2.FormHocSinh
             this.btnPre.Click += BtnPre_Click;
             this.btnHoanthanh.Click += BtnHoanthanh_Click;
             this.FormClosing += FCTKythi_FormClosing;
+
         }
 
         private void FCTKythi_FormClosing(object sender, FormClosingEventArgs e)
@@ -244,7 +252,13 @@ namespace WindowsFormsApp2.FormHocSinh
         }
         private void BtnHoanthanh_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(MessageBox.Show("Vẫn còn thời gian làm bài bạn có muốn tiếp tục?","Thông báo",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.timingthi.Stop();
+                this.timingthi.Dispose();
+                this.Close();
+            }
+            
         }
 
         private void BtnPre_Click(object sender, EventArgs e)

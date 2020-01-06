@@ -50,7 +50,7 @@ namespace WindowsFormsApp2.FormGiaoVien
                 MessageBox.Show("Khối này hiện không có câu hỏi nào!");
                 return;
             }
-            var Listch = lq.Select(idx => new { IDCauhoi = idx.ID, Mota = idx.Mota, IDNguoitao = idx.IDNguoitao });
+            var Listch = lq.Select(idx => new { IDCauhoi = idx.ID, Mota = idx.Mota, IDNguoitao = idx.IDNguoitao,DoKho = idx.Dokho });
             this.dgvCauhoi.DataSource = Listch;
             dgvCauhoi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvCauhoi.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;

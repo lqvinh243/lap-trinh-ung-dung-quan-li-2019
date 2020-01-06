@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSuathongtinHs));
             this.xuiFormDesign1 = new XanderUI.XUIFormDesign();
-            this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
-            this.xuiClock1 = new XanderUI.XUIClock();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHuy = new XanderUI.XUISuperButton();
+            this.btnCapnhat = new XanderUI.XUIButton();
             this.lbID = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.lbLoi = new System.Windows.Forms.Label();
@@ -51,12 +51,12 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lbCMND = new System.Windows.Forms.Label();
             this.txtCMND = new System.Windows.Forms.TextBox();
-            this.btnCapnhat = new XanderUI.XUIButton();
-            this.btnHuy = new XanderUI.XUISuperButton();
+            this.xuiSlidingPanel1 = new XanderUI.XUISlidingPanel();
+            this.xuiClock1 = new XanderUI.XUIClock();
             this.xuiFormDesign1.WorkingArea.SuspendLayout();
             this.xuiFormDesign1.SuspendLayout();
-            this.xuiSlidingPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.xuiSlidingPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // xuiFormDesign1
@@ -85,48 +85,6 @@
             this.xuiFormDesign1.WorkingArea.Size = new System.Drawing.Size(800, 450);
             this.xuiFormDesign1.WorkingArea.TabIndex = 0;
             // 
-            // xuiSlidingPanel1
-            // 
-            this.xuiSlidingPanel1.BottomLeft = System.Drawing.Color.Black;
-            this.xuiSlidingPanel1.BottomRight = System.Drawing.Color.DodgerBlue;
-            this.xuiSlidingPanel1.CollapseControl = null;
-            this.xuiSlidingPanel1.Collapsed = true;
-            this.xuiSlidingPanel1.Controls.Add(this.xuiClock1);
-            this.xuiSlidingPanel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.xuiSlidingPanel1.HideControls = false;
-            this.xuiSlidingPanel1.Location = new System.Drawing.Point(0, 0);
-            this.xuiSlidingPanel1.Name = "xuiSlidingPanel1";
-            this.xuiSlidingPanel1.PanelWidthCollapsed = 50;
-            this.xuiSlidingPanel1.PanelWidthExpanded = 200;
-            this.xuiSlidingPanel1.PrimerColor = System.Drawing.Color.White;
-            this.xuiSlidingPanel1.Size = new System.Drawing.Size(260, 450);
-            this.xuiSlidingPanel1.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
-            this.xuiSlidingPanel1.TabIndex = 0;
-            this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.Black;
-            this.xuiSlidingPanel1.TopRight = System.Drawing.Color.Black;
-            // 
-            // xuiClock1
-            // 
-            this.xuiClock1.CircleThickness = 6;
-            this.xuiClock1.DisplayFormat = XanderUI.XUIClock.HourFormat.TwelveHour;
-            this.xuiClock1.FilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(190)))), ((int)(((byte)(155)))));
-            this.xuiClock1.FilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.FilledSecondColor = System.Drawing.Color.DarkOrchid;
-            this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
-            this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.Location = new System.Drawing.Point(57, 23);
-            this.xuiClock1.Name = "xuiClock1";
-            this.xuiClock1.ShowAmPm = false;
-            this.xuiClock1.ShowHexagon = true;
-            this.xuiClock1.ShowMinutesCircle = true;
-            this.xuiClock1.ShowSecondsCircle = true;
-            this.xuiClock1.Size = new System.Drawing.Size(120, 130);
-            this.xuiClock1.TabIndex = 1;
-            this.xuiClock1.Text = "xuiClock1";
-            this.xuiClock1.UnfilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(85)))));
-            this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnHuy);
@@ -154,6 +112,50 @@
             this.panel1.Size = new System.Drawing.Size(421, 435);
             this.panel1.TabIndex = 11;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(202)))), ((int)(((byte)(142)))));
+            this.btnHuy.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.ButtonImage")));
+            this.btnHuy.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
+            this.btnHuy.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
+            this.btnHuy.ButtonText = "Thoát";
+            this.btnHuy.CornerRadius = 5;
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnHuy.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
+            this.btnHuy.HoverTextColor = System.Drawing.Color.White;
+            this.btnHuy.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
+            this.btnHuy.Location = new System.Drawing.Point(248, 380);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.SelectedBackColor = System.Drawing.Color.LimeGreen;
+            this.btnHuy.SelectedTextColor = System.Drawing.Color.White;
+            this.btnHuy.Size = new System.Drawing.Size(111, 36);
+            this.btnHuy.SuperSelected = false;
+            this.btnHuy.TabIndex = 30;
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
+            // btnCapnhat
+            // 
+            this.btnCapnhat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCapnhat.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnCapnhat.ButtonImage")));
+            this.btnCapnhat.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btnCapnhat.ButtonText = "Cập nhật";
+            this.btnCapnhat.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btnCapnhat.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnCapnhat.CornerRadius = 5;
+            this.btnCapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapnhat.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btnCapnhat.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btnCapnhat.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btnCapnhat.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btnCapnhat.Location = new System.Drawing.Point(41, 380);
+            this.btnCapnhat.Name = "btnCapnhat";
+            this.btnCapnhat.Size = new System.Drawing.Size(132, 36);
+            this.btnCapnhat.TabIndex = 29;
+            this.btnCapnhat.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btnCapnhat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            // 
             // lbID
             // 
             this.lbID.AutoSize = true;
@@ -176,9 +178,8 @@
             this.lbLoi.AutoSize = true;
             this.lbLoi.Location = new System.Drawing.Point(127, 360);
             this.lbLoi.Name = "lbLoi";
-            this.lbLoi.Size = new System.Drawing.Size(46, 17);
+            this.lbLoi.Size = new System.Drawing.Size(0, 17);
             this.lbLoi.TabIndex = 26;
-            this.lbLoi.Text = "label1";
             // 
             // lbNgaysinh
             // 
@@ -311,49 +312,47 @@
             this.txtCMND.Size = new System.Drawing.Size(206, 22);
             this.txtCMND.TabIndex = 10;
             // 
-            // btnCapnhat
+            // xuiSlidingPanel1
             // 
-            this.btnCapnhat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCapnhat.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnCapnhat.ButtonImage")));
-            this.btnCapnhat.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btnCapnhat.ButtonText = "Cập nhật";
-            this.btnCapnhat.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btnCapnhat.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnCapnhat.CornerRadius = 5;
-            this.btnCapnhat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapnhat.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnCapnhat.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btnCapnhat.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btnCapnhat.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btnCapnhat.Location = new System.Drawing.Point(41, 380);
-            this.btnCapnhat.Name = "btnCapnhat";
-            this.btnCapnhat.Size = new System.Drawing.Size(132, 36);
-            this.btnCapnhat.TabIndex = 29;
-            this.btnCapnhat.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btnCapnhat.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiSlidingPanel1.BottomLeft = System.Drawing.Color.Black;
+            this.xuiSlidingPanel1.BottomRight = System.Drawing.Color.DodgerBlue;
+            this.xuiSlidingPanel1.CollapseControl = null;
+            this.xuiSlidingPanel1.Collapsed = true;
+            this.xuiSlidingPanel1.Controls.Add(this.xuiClock1);
+            this.xuiSlidingPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.xuiSlidingPanel1.HideControls = false;
+            this.xuiSlidingPanel1.Location = new System.Drawing.Point(0, 0);
+            this.xuiSlidingPanel1.Name = "xuiSlidingPanel1";
+            this.xuiSlidingPanel1.PanelWidthCollapsed = 50;
+            this.xuiSlidingPanel1.PanelWidthExpanded = 200;
+            this.xuiSlidingPanel1.PrimerColor = System.Drawing.Color.White;
+            this.xuiSlidingPanel1.Size = new System.Drawing.Size(260, 450);
+            this.xuiSlidingPanel1.Style = XanderUI.XUIGradientPanel.GradientStyle.Corners;
+            this.xuiSlidingPanel1.TabIndex = 0;
+            this.xuiSlidingPanel1.TopLeft = System.Drawing.Color.Black;
+            this.xuiSlidingPanel1.TopRight = System.Drawing.Color.Black;
             // 
-            // btnHuy
+            // xuiClock1
             // 
-            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(202)))), ((int)(((byte)(142)))));
-            this.btnHuy.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btnHuy.ButtonImage")));
-            this.btnHuy.ButtonSmoothing = System.Drawing.Drawing2D.SmoothingMode.HighSpeed;
-            this.btnHuy.ButtonStyle = XanderUI.XUISuperButton.Style.RoundedEdges;
-            this.btnHuy.ButtonText = "Thoát";
-            this.btnHuy.CornerRadius = 5;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btnHuy.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(217)))), ((int)(((byte)(174)))));
-            this.btnHuy.HoverTextColor = System.Drawing.Color.White;
-            this.btnHuy.ImagePosition = XanderUI.XUISuperButton.imgPosition.Left;
-            this.btnHuy.Location = new System.Drawing.Point(248, 380);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.SelectedBackColor = System.Drawing.Color.LimeGreen;
-            this.btnHuy.SelectedTextColor = System.Drawing.Color.White;
-            this.btnHuy.Size = new System.Drawing.Size(111, 36);
-            this.btnHuy.SuperSelected = false;
-            this.btnHuy.TabIndex = 30;
-            this.btnHuy.TextColor = System.Drawing.Color.White;
-            this.btnHuy.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.xuiClock1.CircleThickness = 6;
+            this.xuiClock1.DisplayFormat = XanderUI.XUIClock.HourFormat.TwelveHour;
+            this.xuiClock1.FilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(190)))), ((int)(((byte)(155)))));
+            this.xuiClock1.FilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.FilledSecondColor = System.Drawing.Color.DarkOrchid;
+            this.xuiClock1.Font = new System.Drawing.Font("Impact", 15F);
+            this.xuiClock1.HexagonColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.Location = new System.Drawing.Point(57, 23);
+            this.xuiClock1.Name = "xuiClock1";
+            this.xuiClock1.ShowAmPm = false;
+            this.xuiClock1.ShowHexagon = true;
+            this.xuiClock1.ShowMinutesCircle = true;
+            this.xuiClock1.ShowSecondsCircle = true;
+            this.xuiClock1.Size = new System.Drawing.Size(120, 130);
+            this.xuiClock1.TabIndex = 1;
+            this.xuiClock1.Text = "xuiClock1";
+            this.xuiClock1.UnfilledHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(85)))));
+            this.xuiClock1.UnfilledMinuteColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
+            this.xuiClock1.UnfilledSecondColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(70)))));
             // 
             // fSuathongtinHs
             // 
@@ -366,9 +365,9 @@
             this.Text = "fSuathongtinHs";
             this.xuiFormDesign1.WorkingArea.ResumeLayout(false);
             this.xuiFormDesign1.ResumeLayout(false);
-            this.xuiSlidingPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.xuiSlidingPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

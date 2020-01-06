@@ -48,6 +48,15 @@ namespace WindowsFormsApp2.FormHocSinh
 
         private void CmsInbangdiem_Click(object sender, EventArgs e)
         {
+            using(var DB = new QTDataContext())
+            {
+                var check = DB.CT_ThamGias.Where(idx => idx.IDHocsinh == CurrentUser.UserID && idx.Diem != null);
+                if (check.Count() <= 0)
+                {
+                    MessageBox.Show("Chưa có kỳ thi nào diễn ra nên không thể sử dụng chức năng này!!");
+                    return;
+                }
+            }
             fBangdiem f = new fBangdiem();
             f.ShowDialog();
         }
